@@ -1,0 +1,29 @@
+quota;                               #affiche l'espace mémoir utilisé
+ps -alL;                             #processus
+ps -ef ;                             #tout les processus
+xwininfo; wprop;                     #processus fenetre
+quota | awk 'NR==4{print $1}'        #découpe quota(4-ligne/1-colone)
+vim /etc/passwd                      #liste les commandes interdites
+gnome-open                           #ouvre le fichier avec le bon prgm
+telnet ensiens 25;                   #envoyer des mail
+env; set;                            #affiche les variable d'environnement
+du * .* -shc;                        #occupation du disque
+vim /etc/services;                   #liste les ports
+$PKG_CONFIG_PATH $LD_LIBRARY_PATH    #variable pour les libraries
+chmod; setfacl; getfacl;             #gestion des droits
+chown;                               #change l'utilisateur
+who; w; write;                       #qui fait quoi sur le serveur
+which; history;                      #trouver une commande
+echo "scale=3; 8/3"|bc               #Arithmetique
+as; objdump;                         #compiler décompiler les executables
+screen; ctrl+a "                     #Ouvre un terminal, change de terminal
+grep -lR "x" *                       #Affiche les fichiers contenant x
+killall name                         #supprime tout les prgm appelé name
+free -m                              #Affiche l'uilisation de la RAM
+df                                   #list peripheral devices
+dd                                   #copie bit à bit :if = in-file of=out-file
+mount -o iocharset=utf8              #monte une clé USB au format utf8
+shred                                #écrese complétement un fichier
+alsamixer			     #gestionaire des son
+lspci				     #liste du materiel
+nmap -sP 192.168.0.*		     #liste des machine du reseau local
