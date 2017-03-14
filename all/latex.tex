@@ -1,0 +1,66 @@
+\documentclass{article}
+	\title{Creer avec \LaTeX}
+	\usepackage{amssymb}
+\begin{document}
+	\maketitle
+	\newpage
+	\tableofcontents
+	\newpage
+	\section*{Type de document}
+		$\backslash documentclass\{minimal\} $
+		- même pas de titire\\ %\leftarrow
+		$\backslash documentclass\{article\}$
+		- section et sous section\\
+		$\backslash documentclass\{report\} $
+		- Partie et chapitre en plus des sections\\
+	\section*{Corp du document}
+		$\backslash begin\{document\}$ \\
+		ecrir ici 
+		$\backslash \backslash$ \%Commentaire : le double backslash permet de retourner a la ligne\\
+		$\backslash newline$ \\
+		$\backslash newpage$ \\
+		$\backslash end\{document\}$ \\
+	\section*{Organisation}
+		pour annoncer une partie\\
+		$\backslash part\{Nom De La Partie\}$ \\
+		\newline
+		pour annoncer un chapitre\\
+		$\backslash chapter\{Nom Du Chapitre\}$ \\
+		\newline
+		pour annoncer une section\\
+		$\backslash section\{Nom De La Section\}$ ou  $\backslash section*\{Nom De La Section\}$ si on ne veux pas le numero \\
+		\newline
+		pour annoncer une sous-section\\
+		$\backslash subsection\{Nom De La Sous Section\}$ \\
+		\newline
+		pour annoncer un paragraphe\\
+		$\backslash subsection\{Nom De La Sous Section\}$ \\
+		\newline
+		pour annoncer un sous-paragraphe\\
+		$\backslash subsection\{Nom De La Sous Section\}$ 
+	\section*{Un titre}
+		Creation du titre \\
+		$\backslash title\{Titre Du Document\}$
+		entre le document class et le begin \\		
+		Position du titre a l'endroit ou l'on peut lire \\
+		$\backslash maketitle$ \\
+	\section*{Liste}	
+	\section*{Sommaire et Index}	
+	\section*{Package}	
+%		\usepackage[utf8]{inputenc}
+%		\usepackage[latin1]{inputenc}
+	\section*{Image}	
+	\section*{Math}	
+	\subsection*{Symbole}	
+		\[\sum_{n=1}^{+\infty}\frac{1}{n^2}=\frac{\pi^2}{6}.\]
+	\section*{Informatique : ecrire du code source}	
+	\section*{Eciture}	
+	\subsection*{Allignement}	
+	\subsection*{Police}
+	\section*{Tableau}	
+		\begin{tabbing}
+		Une phrase assez longue \= encore rallongée \= qui se finit ici. \= \\
+		Fruits  \> pomme \> poire \> prune \\
+		Couleurs \> vert \>jaune \> violet
+		\end{tabbing}
+\end{document}

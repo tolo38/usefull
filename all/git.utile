@@ -1,0 +1,22 @@
+créer un dépots :
+git init --shared --bare notre-tp.git
+
+trouver l'address du depots git :
+git remote show origin
+
+annuler une modificatio 
+git checkout <file>
+
+git clone
+
+git commit
+git commit -a
+
+
+git pull
+récupère la mise a joure distante
+
+git push
+met a joure la branche maitre
+
+gestion des Branches

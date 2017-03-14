@@ -1,0 +1,21 @@
+
+le debugage en C n'est pas une option.
+on concidere qu'un programme fonction lorsque :
+-il compile
+-il s'execute
+-fournuis le resultat attendu
+-gere la memoire comme prévu
+
+pour tester la dernire option,
+on utilise 3 outil pour le debug :
+gdb, valgrind, fsanitize
+dont les comandes sont:
+gdb ./prog
+valgrind ./prog
+./prog_fsanitize
+
+1-gdb :
+
+
+2-valgrind :
+incontournable, 
