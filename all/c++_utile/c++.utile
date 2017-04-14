@@ -1,0 +1,46 @@
+
+-----------------------------------------------------------
+- Premier programme
+-----------------------------------------------------------
+
+class POINT
+{
+	public :
+		int dim;
+		double x,y,z;
+		void print()
+		{cout<<”coordonnees : ”<<x<<” ”<<y<<” ”<<z;}
+		POINT(int d); // declaration du constructeur
+	private :
+		double *pCor;
+};
+POINT::POINT(int d) //implementation externe du constructeur
+{
+	dim = d;
+	pCor = new double[dim]; //allocation
+	for(int i=0;i<dim;i++) pCor[i] = 0;
+}
+int main()
+{
+	POINT P; //instanciation d'un objet POINT
+	P.dim = 3;
+	P.x = 0; P.y=0; P.z=0;
+	P.print();
+	POINT *pQ = &P; //pointeur sur le POINT P
+	pQ->x=1.;
+	POINT *pQ = new POINT(3); // pointeur sur un POINT
+}
+
+Transtypage :
+const_cast;dynamic_cast;reinterpret_cast;static_cast
+
+return *this;			#retrourne autoreference
+
+retourner une reference : permet de modifier
+for(int i=1;i<=10;i++) element(i)=1;
+avec la fonction : double & function element(const int & i);{return vec[i];}
+
+
+double fonc(double x, int der=0, double par=0){...}	#valeur par defaut
+
+inline double carre(double y){return y*y;}			#Macro en C

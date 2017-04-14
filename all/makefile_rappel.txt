@@ -1,3 +1,6 @@
+http://gl.developpez.com/tutoriel/outil/makefile/
+
+
 Les makeile essaye de générer le fichier présisé par la règle appelee
 si certaine dépendance manque a l'appel il essaye d'appeler les règles correspondante
 sinon leve une erreur
