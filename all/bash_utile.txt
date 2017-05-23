@@ -24,6 +24,7 @@ df                                   #list peripheral devices
 dd                                   #copie bit à bit :if = in-file of=out-file
 mount -o iocharset=utf8              #monte une clé USB au format utf8
 shred                                #écrese complétement un fichier
-alsamixer			     #gestionaire des son
-lspci				     #liste du materiel
-nmap -sP 192.168.0.*		     #liste des machine du reseau local
+alsamixer						     #gestionaire des son
+lspci							     #liste du materiel
+nmap -sP 192.168.0.*				 #liste des machine du reseau local
+rsync -av <IN_file> <MAJ_file>	     #mettre à jour un fichier synchroniser
