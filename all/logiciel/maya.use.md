@@ -68,7 +68,10 @@ node editor
 ---
 ||||
 |-|-|-
-
+|1,2,3,4|					|change view
+|Tab|						|add new node
+|click drag|					|create connection
+|ctrl+ wheel click drag|			|create defqult connection
 
 
 |ctrl+hold right click|
