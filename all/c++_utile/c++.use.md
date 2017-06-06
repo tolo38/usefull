@@ -55,6 +55,7 @@ const					constante
 
 flux
 ----
+<iostream>				#include
 cout << var << endl			sortie + retour à la ligne
 cin >> var				entré
 cin.ignore(); getline(cin,var);		"vidé buffer" + lire ligne avec espace
