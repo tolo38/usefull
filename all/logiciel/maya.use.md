@@ -18,6 +18,7 @@ view
 |4| 				|wirefram view
 |5|	    			|shaded view
 |6|	    			|textured view
+|Render->Legacy hight quality view port|	|Plaque la texture directement sur la vue
 
 
 
@@ -79,6 +80,17 @@ Ou dans le *NodeEditor* select the *surfaceShader* and click on *InputConnection
 Pour commencer il faut ajouter un materiaux : right click hold -> add material (or on a node : Assign material to viewport material)
 Think to check : witch is the material assignated to your shape !
 
+Texturing
+---
+remapColor
+bump2d
+blinn
+surfaceShader
+plusMinusAverage
+(Note : "the blue node" is useless)
+(Note : The black absorbe all light, if you want to see something add color)
+Animate->create Deformer->Texture Deformer					Displacment
+
 Animate
 ---
 switch the self to *Animate*
@@ -117,11 +129,14 @@ in *Character Controle Menu* -> Bake -> to control Rig
 Rendering
 ---
 switch the self to *Rendering*
+render->renderCurrentFrame								Open the render view Window
+File-> keep image in render view						in the render view window
 Widows->Rendering Editors->Render Settings				To Set [image rendering ->file type = .png + number of frame]
 scripte editor		(low right corner)					To see the rendering involve
 Render-> batch Render									To throw the rendering
 log file												If their is an unexpected issue
 (low right corner) PropertyWindows						let you set the Fps rating
+|Esc|													|Stop the rendering
 
 plug-in
 ---
