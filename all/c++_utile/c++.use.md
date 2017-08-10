@@ -93,8 +93,9 @@ delete var				libere la mémoir alloue à var
 
 class Objet{}; + Heritage
 ----
+class ObjChild : public Obj{}		Heritage : ObjChild herite de Obj et est definie entre crochet, Note : public->par defaut l'heritage est private, ce aui rend inaccecible les declaration de la class parente.
 private :				par defaut tout les attributs sont private
-a noter que l'on peu acceder au attribu privé des autres objets si il sont de la classe en train d'être implémentée.
+a noter que l'on peu acceder au attribut privé des autres objets si il sont de la classe en train d'être implémentée.
 mais pas dans la classe mere 	->	en pratique on prefert déclarer les attributs en protected
 struct					si au lieu d'une class on a une srtuc alors attribut public par defaut
 Objet()					Constructeur vide
