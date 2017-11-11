@@ -2,3 +2,6 @@ python -Qnew prog.py			#execute un scripte python
 x**y							#x a la puissance y
 
 pip install --user tqdm			#installer le paquet tqdm
+Pakage :
+	pytest
+	opencv-python
