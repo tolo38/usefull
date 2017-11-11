@@ -28,3 +28,5 @@ alsamixer						     #gestionaire des son
 lspci							     #liste du materiel
 nmap -sP 192.168.0.*				 #liste des machine du reseau local
 rsync -av <IN_file> <MAJ_file>	     #mettre à jour un fichier synchroniser
+tree -F | less						 #Rechercher un fichier
+
