@@ -8,6 +8,7 @@ annuler une modificatio
 git checkout <file>
 
 git clone
+https://user:password@git_host...
 
 git commit
 git commit -a
@@ -20,3 +21,14 @@ git push
 met a joure la branche maitre
 
 gestion des Branches
+
+
+pour ne pas avoir à tout le temps mettr user
+-rensseigne name@file.git au premier commit
+-git --config -i
+
+ajout interactif
+git add -p
+
+Save password
+git config credentrial.helper store
