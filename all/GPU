@@ -67,3 +67,8 @@ Compute Shader
 		glm:https://glm.g-truc.net/0.9.8/index.html
 		Write GLSL code in C++, debug in C++, transfer to GLSL
 
+
+
+glm
+---
+#include "glm/ext.hpp" -> glm::to_string(GenType)
