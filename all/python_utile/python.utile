@@ -70,6 +70,7 @@ d = {}
 d = {key:value,k2:v2}
 d= dict(k1=v1,k2=v2)
 for k, v in knights.items():	#loop with k and v
+pairs.sort(key=lambda pair: pair[1]) #cool : permet de trier en indiquant la position de la clé
 
 
 Fonction
@@ -100,6 +101,29 @@ def func(a : str)->int:
 print(func.__doc__)				#display the function doc
 print(func.__annotations__)		#function attribute type(warning : c'est juste de la doc on peu mettre nimporte quoi) 
 
+In/Out
+---
+x = int(input("Please enter an integer: "))		#read a int from keyboard
+print(repr(x).rjust(2), repr(x*x).rjust(3), end=' ')
+print(repr(x*x*x).rjust(4))		#ajute les espace
+print('{0:2d} {1:3d} {2:4d}'.format(x, x*x, x*x*x))	#affiche la même chose
+print('%d %d %d' % x, x*x, x*x*x)		#ancien methode
+print('{!s} {a1:.3}'.format(x, a1=math.pi))	#!s do as str() converti en string
+f = open('file', 'w')			#open a file
+with open('workfile') as f:		#better practice
+read_data = f.read()			#read file
+f.closed						#test if the file is open/close
+f.write(b 'something')			#write something in f (b : opt, mean that it is a binary file
+seek(),tell()					#allow to move in the file
+
+
+Serializing
+---
+import json
+json.dumps([1, 'simple', 'list'])
+dump(),load()					#see also
+
+
 Note
 ---
 
@@ -120,5 +144,3 @@ ToUnderstand
 ---
 *a
 **a
-lambda x,y: x+y
-pairs.sort(key=lambda pair: pair[1]) #cool : permet de trier en indiquant la position de la clé
