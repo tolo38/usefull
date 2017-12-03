@@ -10,6 +10,14 @@ x**y							#x a la puissance y
 pass							#"Nop" statment: do nothing
 float('NaN')					#valeur inexistante
 
+Module
+---
+from mod import	*				#load all the name in the curent namespace
+from mod import sub				#better practice
+import mod						#instead of this load it in mod namespace 
+dir(mod)						#provide the list of those names
+if __name__ == "__main__":		#at the end of a module: allow to test it
+
 boolean
 ---
 a in b (a not in b)
