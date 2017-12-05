@@ -124,6 +124,13 @@ json.dumps([1, 'simple', 'list'])
 dump(),load()					#see also
 
 
+Class
+---
+class MyClass:					#new class declaration
+MyClass.f					#attribute reference
+x = MyClass()					#instantiation
+def __init__(self):				#constructor
+
 Note
 ---
 
