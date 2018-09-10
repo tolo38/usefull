@@ -9,10 +9,12 @@ git checkout <file>
 
 git clone
 https://user:password@git_host...
+sever.dom:/path/to/file
 
 git commit
 git commit -a
 
+touch .gitignore
 
 git pull
 récupère la mise a joure distante
