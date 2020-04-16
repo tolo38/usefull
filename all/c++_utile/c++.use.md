@@ -2,7 +2,7 @@
 -----------------------------------------------------------
 - Premier programme
 -----------------------------------------------------------
-
+```
 class POINT
 {
 	public :
@@ -30,7 +30,7 @@ int main()
 	pQ->x=1.;
 	POINT *pQ = new POINT(3); // pointeur sur un POINT
 }
-
+```
 Transtypage :
 const_cast;dynamic_cast;reinterpret_cast;static_cast
 
@@ -62,6 +62,13 @@ cin.ignore(); getline(cin,var);		"vidé buffer" + lire ligne avec espace
 
 reference
 --------
+-- https://www.quora.com/Are-references-in-C++-stored-in-memory-like-pointers-or-not/answer/Lance-Diduck
+<cite>
+	A reference is another name for the same variable. For example, "Charlie Brown" is also called "Chuck" -- a reference is just another name for the same object.
+	The "last person in the lunch line" is a pointer, and can change or point to nothing.
+	Another analogy is from UNIX file system: a reference is a hard link, a pointer is a soft link.
+	How they are stored is not specified, but a pointer you can pretty much rely on having storage 
+</cite>
 les reference sont une étique qui pointe sur la meme case mémoir, mais non pas besoin d'être déreférencée
 Par defaut argument passage par copie;
 int& ref(var) 				creer une reference sur var 
