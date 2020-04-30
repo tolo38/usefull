@@ -32,7 +32,7 @@ lspci							     #liste du materiel
 nmap -sP 192.168.0.*				 #liste des machine du reseau local
 rsync -av <IN_file> <MAJ_file>	     #mettre à jour un fichier synchroniser
 tree -F | less						 #Rechercher un fichier
-[ -z "$var" ] && echo "Empty" || echo "$var"		#ternary operator
+[ -z "$var" ] && echo "Empty" || echo "$var"		#ternary operator (Note the spaces)
 cp -al					#make a hard link instead of a copy
 date -d "+1 month" +%b			#show the next month
 RANDOM=$(od -An -N3 -i /dev/random)     #get a random int
