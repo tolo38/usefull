@@ -169,10 +169,21 @@ Le type des iterator varie selon le conteneur auquel il est associé (5 types : 
 
 page 566
 
+[Standard library](https://en.cppreference.com/w/cpp/header)
+
 Template - Généricité
 -------------------
 template<typename T>			indique que la méthode ou la class est générique via l'element T.
 					dois etre implémenté dans le fichier Header
 template<typename T,typename S>		on peux en avoir plusieurs 
 template <> meth<Obj>			spécification : permet de définir la methode dans le cas ou on applique le template sur un Obj
+
+compilation option
+--------------
+-L path to shared library
+-I path to headers
+-W, -Wall verbosity, warning (all)
+-g add debug flags for gdb
+-c     Compiler source(s) to object-code (input to linker). This option is better for incremental compilation when using multiple files.
+[for more details](https://caiorss.github.io/C-Cpp-Notes/compiler-flags-options.html)
 

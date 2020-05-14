@@ -265,3 +265,39 @@ the lazy evalution.
 
 delete empty directories
 `find . -empty -type d -delete`
+
+expend shell command
+<ctrl> + <alt> + e
+or edite `~/.inputrc` add a line with 
+```"\e\C-e": alias-expand-line```
+
+empty swap memory
+```swapoff -a && swapon -a```
+
+
+sound mixer issue difference between 
+`amixer set Master 5%+`
+and 
+`amixer -D pulse set Master 5%+`
+=
+`pactl set-sink-volume @DEFAULT_SINK@ +5%`
+also max reduced by gnome environment sound setting
+
+https://wiki.ubuntu.com/DebuggingSoundProblems
+https://help.ubuntu.com/community/SoundTroubleshootingProcedure
+
+
+check desktop environment
+```
+echo $XDG_CURRENT_DESKTOP
+ps -e | grep -E -i "xfce|kde|gnome"
+```
+
+command to clear chache 
+(1:PageCache only, 2:dentries and inodes, 3:PageCache, dentries and
+inodes)
+```
+sync; echo 1 > /proc/sys/vm/drop_caches
+sync; echo 2 > /proc/sys/vm/drop_caches
+sync; echo 3 > /proc/sys/vm/drop_caches
+```
