@@ -1,6 +1,8 @@
 GIT
 ===
 
+[Cheat-sheet](https://education.github.com/git-cheat-sheet-education.pdf)
+
 ### Basic commands
 
 * créer un dépots :
@@ -64,3 +66,10 @@ vim .gitattributes
 
 ### Branches
 `git checkout -b new_branche`
+
+### log
+display changes made by commit 
+`git log --stat -M`
+display graph
+`git log --all --decorate --oneline --graph`
+
