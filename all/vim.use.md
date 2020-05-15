@@ -46,3 +46,5 @@ multiligne identical line bloc insert(usefull for block commenting)
 remaping
 ---
 note remaping ESC can cause unexpected behavior
+(exclamation mark turn command to toggle mode)
+nnoremap <n><l> :set hls!<cr>

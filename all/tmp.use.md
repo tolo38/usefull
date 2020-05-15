@@ -108,74 +108,8 @@ https://gist.github.com/mawenbao/9223908
 #### glut
 http://www.lighthouse3d.com/tutorials/glut-tutorial/
 
-#### c++
-compilation option :
--L path to shared library
--I path to headers
--W, -Wall verbosity, warning (all)
--g add debug flags for gdb
--c     Compiler source(s) to object-code (input to linker). This option is better for incremental compilation when using multiple files.
-[for more details](https://caiorss.github.io/C-Cpp-Notes/compiler-flags-options.html)
-
-[Standard library](https://en.cppreference.com/w/cpp/header)
-
-reference
-[Core
-guidelines](http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#a-namerc-orgac1-organize-related-data-into-structures-structs-or-classes)
-
-check memoyleaks
-[valgring](http://valgrind.org/docs/manual/mc-manual.html)
-
-headers
-http://www.cplusplus.com/articles/Gw6AC542/
-
-lambda function
-`[]{}`
-where 
-    *[] lambda-introducer
-    *{} instruction bloc of the funtion
-It can also be seen as follow
-```
-[ capture clause ] (parameters) mutable sepcification -> return-type
-{
-   definition of method
-}( call with parametes )
-```
-Syntax used for capturing variables :
-      *[&] : capture all external variable by reference
-      *[=] : capture all external variable by value
-      *[a, &b] : capture a by value and b by reference
-https://www.codeproject.com/Articles/71540/Explicating-the-new-C-standard-C-0x-and-its-implem#LambdaExpressions
-
-callbacks
-A callback is a function that takes a *callable*(listed below) as parameter and call it at the genuine point
->One reason to use callbacks is to write generic code which is independant from the logic in the called function and can be reused with different callbacks.
-
-    -Function pointers (including pointers to member functions)
-        -`return_type (*[name])([parameters])` (`[]`:optional) 
-    -`std::function` objects
-    -Lambda expressions
-    -Bind expressions
-    -Function objects (classes with overloaded function call operator operator())
-
->\* Note: Pointer to data members are callable as well but no function is called at all.
-
-[more details](https://stackoverflow.com/questions/2298242/callback-functions-in-c)
 
 
-#### md
->block quote
-```>block quote```
-
-
-#### vim 
-multiligne identical line bloc insert(usefull for block commenting)
-    -`ctrl+v` `]select` `maj+i` `]insert` `esc`
-    -`v` `]select` `:s/^/` `]insert` `/` `enter`
-
-remaping 
-
-note remaping ESC can cause unexpected behavior
 
 #### bash
 match only/all directories : 
@@ -189,10 +123,6 @@ debug
 add `-x` option  the shebang `#!/bin/bash -x`
 install shellcheck
 
-
-#### Git
-[Cheat-sheet](https://education.github.com/git-cheat-sheet-education.pdf)
-`git log --stat -M`
 
 to check if a library is installed
 `ldconfig -p | grep libname`
