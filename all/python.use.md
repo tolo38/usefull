@@ -2,28 +2,34 @@
 
 interpretor
 ---
-
+```
 python [-i src.py]				#mode interactif 
 _								#resultat precedent
 x**y							#x a la puissance y
 "un"+" peu"						#concatenate
 pass							#"Nop" statment: do nothing
 float('NaN')					#valeur inexistante
-
+```
 Module
 ---
+```
 from mod import	*				#load all the name in the curent namespace
 from mod import sub				#better practice
 import mod						#instead of this load it in mod namespace 
 dir(mod)						#provide the list of those names
 if __name__ == "__main__":		#at the end of a module: allow to test it
+```
+Variable
+---
+`help(var) 		#Give us details about variable type, en fonctions`
 
 boolean
 ---
+```
 a in b (a not in b)
 a is b (a is not b)
 and, or							#short-circuit operators
-
+```
 Tableau(=Lists(=pile))
 ---
 
@@ -122,6 +128,10 @@ Serializing
 import json
 json.dumps([1, 'simple', 'list'])
 dump(),load()					#see also
+
+Parsing(RegExp)
+---
+`nodes=[re.findall('\d+', n) for n in strArr]   #make a list of numbers from string for each`
 
 
 Class
