@@ -63,6 +63,8 @@ vim .gitattributes
 `alias lg='git log --all --decorate --oneline --graph'`
 * modify last commit
 `git commit --amend` (need `add`before) if already pushed add force option `git push --force`
+* view previous commit changes
+`git show HEAD[~#]`
 
 ### Branches
 `git checkout -b new_branche`
