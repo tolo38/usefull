@@ -84,10 +84,10 @@ display graph
 
 ### Test Driven Devellopment (TDD)
 * Create a branch from `develop`for the issue
-* Create a branch from `issue` by feature/behavior
+* ~~Create a branch from `issue` by feature/behavior~~
 * Write a test requiering the feature and `commit -m "<feature> [Req]"`
 * Write the minimal code to pass the test `commit -m "<feature> [Min]"`
-* Refactore that code and `commit -m "<feature>"` and merge to `issue`
+* Refactore that code and `commit -m "<feature>"` ~~and merge to `issue`~~
 * Continue to the next feature until the issue has to be merged
 * It is easy to edit any commit with `git rebase -i ###~` with `###` the commit ID.
 * Use `git rebase --continue` to go for the next commit.
