@@ -58,6 +58,8 @@ vim .gitattributes
 
 ### advanced commands
 
+* see the history
+`git reflog show` 
 * to revert initial git commit
 `git update-ref -d HEAD`
 * to modify previous commit
