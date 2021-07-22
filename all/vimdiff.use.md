@@ -1,4 +1,7 @@
+[Cheat Sheet](https://gist.github.com/mattratleph/4026987)
+
 Keyboard Shortcuts:
+--
 
 do - Get changes from other window into the current window.
 
@@ -15,7 +18,7 @@ If you load up two files in splits (:vs or :sp), you can do :diffthis on each wi
 :diffoff can be used to turn off the diff mode. 
 You can even just say :windo diffthis in one of the split, and it will apply to all splits in that window :)
 
-However, `Ctrl W + Ctrl W' is not required to switch windows. Ctrl W + W is enough to cycle windows. You can try Ctrl W + <any of the direction keys> to switch among windows in vimdiff or in vim with split windows.
+However, `Ctrl W + Ctrl W` is not required to switch windows. Ctrl W + W is enough to cycle windows. You can try Ctrl W + <any of the direction keys> to switch among windows in vimdiff or in vim with split windows.
 
 To ignore whitespace use this command: set diffopt+=iwhite
 
@@ -28,3 +31,13 @@ To turn that back off use: set diffopt-=iwhite
 :qa to quit all
 :qa! to quit all without saving
 :wqa save and quit all
+  
+Git Mergetool
+--
+  
+* get Local/Base/Remote to file
+ `:diffget Lo/Ba/Re`
+* get a specific line (" split the chunk")
+`v` select in visual mode, then `:diffget ...`
+* more at : `:help copy-diffs`
+ 
