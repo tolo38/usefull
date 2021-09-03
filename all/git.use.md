@@ -62,19 +62,28 @@ vim .gitattributes
 `git reflog show` 
 * to revert initial git commit
 `git update-ref -d HEAD`
-* to modify previous commit
-`git commit rebase -i`
 * to deal with conflict when rebase or merge
 `git mergetool` usually [vimdiff](https://github.com/tolo38/usefull/blob/master/all/vimdiff.use.md)
 * pretty print of the graph
 `alias lg='git log --all --decorate --oneline --graph'`
 * modify last commit
 `git commit --amend` (need `add`before) if already pushed add force option `git push --force`
+* to modify previous commit 
+`git commit rebase -i` use `HEAD~#` 
+  * then squash
+move commit line bellow the one to merge with change `pick` to `s` 
 * view previous commit changes
 `git show HEAD[^#]`
 
 ### Branches
-`git checkout -b new_branche`
+`git checkout -b new_branch`
+* rebase on `develop` branch
+```
+git checkout develop
+git pull -p
+git checkout <branch>
+git rebase develop
+```
 
 ### log
 display changes made by commit 
