@@ -184,8 +184,29 @@ you can look for header file you need to include with www.debian.org
     click `packages` and look for *Search the contents of packages*
     and check `packages that contain files named like this`
 
+### Temporary files
 
+```
+mktemp && vim "$_"
+mount -t tmpfs -o size=500m tmpfs /mountpoin
+```
+    
+### Encrypt file
+ 
+`vim` Encrypte `-x` and decipher `-X`
 
+    
+Decipher gpg file 
+    ```
+    tf=$(mktemp)
+    gpg -o $tf -d ~/gpg_file && localc $tf
+    ```
+And Cipher back
+    ` && gpg -o ~/gpg_file --cipher-algo AES256 -c $tf`
+    
+    
+`echo RELOADAGENT | gpg-connect-agent` remove passphrase from cache
+    
 ### Media Tools
 
 Normalize musics with `mp3gain`
