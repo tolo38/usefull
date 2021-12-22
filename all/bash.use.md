@@ -197,10 +197,13 @@ mount -t tmpfs -o size=500m tmpfs /mountpoin
 
     
 Decipher gpg file 
-    ```
+```
     tf=$(mktemp)
     gpg -o $tf -d ~/gpg_file && localc $tf
-    ```
+```    
+
+with `localc` openning the temporary file in a libreoffice sheet
+    
 And Cipher back
     ` && gpg -o ~/gpg_file --cipher-algo AES256 -c $tf`
     
