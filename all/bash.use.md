@@ -41,7 +41,7 @@ which; history;                      #trouver une commande
 echo "scale=3; 8/3"|bc               #Arithmetique
 as; objdump;                         #compiler décompiler les executables
 screen; ctrl+a "                     #Ouvre un terminal, change de terminal
-grep -lR "x" *                       #Affiche les fichiers contenant x
+grep -lR "x" *                       #find recurivly files containing "x"
 grep -zo                             #regexp on the whole file as one line
 killall name                         #supprime tout les prgm appelé name
 free -m                              #Affiche l'uilisation de la RAM
@@ -75,6 +75,18 @@ match only/all directories :
 
 change extention :
 `for f in *.OLDNAME; do mv $f `basename $f .OLDNAME`.NEWNAME; done;`
+
+ask for confirmation :
+```
+while true; do
+    read -p "Continue (y/n)?" -n 1 -r
+    case "$REPLY" in
+        y ) break;;
+        n ) break 2;;
+        * ) echo "invalid";;
+    esac
+done
+```
 
 System Information
 ---
