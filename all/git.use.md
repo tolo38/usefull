@@ -1,7 +1,10 @@
 GIT
 ===
 
-[Cheat-sheet](https://education.github.com/git-cheat-sheet-education.pdf)
+[Cheat-sheet - github](https://education.github.com/git-cheat-sheet-education.pdf)
+
+[Cheat-sheet - gitlab](https://about.gitlab.com/images/press/git-cheat-sheet.pdf)
+
 
 ### Basic commands
 
@@ -41,6 +44,8 @@ sever.dom:/path/to/file
 * met a joure la branche maitre
 `git push`
 
+* Clean repo from untracked files
+`git clean -fd`
 
 ### Configuration
 
