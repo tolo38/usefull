@@ -164,6 +164,81 @@ How to 'grep' a continuous stream?
 Turn on grep's line buffering mode when using BSD grep (FreeBSD, Mac OS X etc.)
 tail -f file | grep --line-buffered my_pattern
 
+#### Options And Arguments
+
+[Tuto](https://sookocheff.com/post/bash/parsing-bash-script-arguments-with-shopts/)
+[Multiple Argument for a single opt](https://stackoverflow.com/q/7529856)
+
+Test the following file running `bash try f1 -c test t ty whet si the loh teraim you tuk`
+
+```
+#! \bin\bash
+text=""  # Default to empty
+textPlus=""
+sub=""
+folder1=""
+folder2=""
+
+#Last argument
+folder1=${!#}
+#next to last
+folder2=${*: -2:1}
+# All arguments
+echo $@
+
+while getopts ":h" opt; do
+  case ${opt} in
+    h )
+      echo "Usage:"
+      echo "    test -h                      Display this help message."
+      echo "    test pos1Arg                 read options."
+      exit 0
+      ;;
+   \? )
+     echo "Invalid Option: -$OPTARG" 1>&2
+     exit 1
+     ;;
+  esac
+done
+shift $((OPTIND -1))
+
+# remove 'cmdName' from arg list
+shift
+
+#Lookfor -c option
+while getopts ":c:" opt; do
+  case ${opt} in
+    c )
+            #First arg after -c
+            text=$OPTARG
+            #Next on
+            textPlus=$(eval "echo \${$OPTIND}")
+            #All args after -c before other dash
+            sub=("$OPTARG")
+            until [[ $(eval "echo \${$OPTIND}") =~ ^-.* ]] || [ -z $(eval "echo \${$OPTIND}") ]; do
+                sub+=($(eval "echo \${$OPTIND}"))
+                OPTIND=$((OPTIND + 1))
+            done
+      ;;
+   \? )
+     echo "Invalid Option: -$OPTARG" 1>&2
+     exit 1
+     ;;
+        : )
+          echo "Invalid Option: -$OPTARG requires an argument" 1>&2
+          exit 1
+          ;;
+  esac
+done
+shift $((OPTIND -1))
+
+echo $@
+echo "contain $text word(s)"
+echo "Plus $textPlus word(s)"
+echo in $folder1 folder
+echo in $folder2 folder
+echo remians ${sub[@]}
+```
 
 
 ### Sed
