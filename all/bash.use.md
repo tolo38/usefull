@@ -62,6 +62,7 @@ tee >file >(cmd)			#multiplicate output, here send to file,cmd and stdout
 zenity					#make a GUI for shell scripts
 echo "o" | xargs -i echo "hell{} world !" #previous pipe output, call in middle of the command
 pv                                   #to monitor progress
+tar -xvf archive.tar.gz              #to extract
 ```
 
 
@@ -86,6 +87,12 @@ while true; do
         * ) echo "invalid";;
     esac
 done
+```
+
+`less` to display the file per centage
+```
+Type:
+Gg-M
 ```
 
 System Information
