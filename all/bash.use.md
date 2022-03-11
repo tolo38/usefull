@@ -43,6 +43,7 @@ as; objdump;                         #compiler décompiler les executables
 screen; ctrl+a "                     #Ouvre un terminal, change de terminal
 grep -lR "x" *                       #find recurivly files containing "x"
 grep -zo                             #regexp on the whole file as one line
+grep -B 5 -A 2 --color               #Shows line before and after with color
 killall name                         #supprime tout les prgm appelé name
 free -m                              #Affiche l'uilisation de la RAM
 df                                   #list peripheral devices
@@ -89,7 +90,7 @@ while true; do
 done
 ```
 
-`less` to display the file per centage
+`less` to display the file per centage `CTRL + G`
 ```
 Type:
 Gg-M
@@ -170,6 +171,27 @@ echo "${var[@]}"
 How to 'grep' a continuous stream?
 Turn on grep's line buffering mode when using BSD grep (FreeBSD, Mac OS X etc.)
 tail -f file | grep --line-buffered my_pattern
+
+#### Functions
+[details](https://linuxize.com/post/bash-functions/)
+
+```
+function myfunc()
+{
+    local  __resultvar=$1
+    local  myresult='some value'
+    if [[ "$__resultvar" ]]; then
+        eval $__resultvar="'$myresult'"
+    else
+        echo "$myresult"
+    fi
+}
+
+myfunc result
+echo $result
+result2=$(myfunc)
+echo $result2
+```
 
 #### Options And Arguments
 
