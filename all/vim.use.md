@@ -8,6 +8,8 @@ Best cmd
 - `:w !sudo tee %` save as root
 - `ctrl+q` undo `ctrl+s`
 - merge lines `Shif+J`
+- `:!` run a command in term
+- as `%` match the whole file `:%!xxd` turn binary to hexadecimal
 
 Basic
 ---
