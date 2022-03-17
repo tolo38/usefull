@@ -46,7 +46,7 @@ headers
 ---
 http://www.cplusplus.com/articles/Gw6AC542/
 
-
+```
 Transtypage :
 const_cast;dynamic_cast;reinterpret_cast;static_cast
 
@@ -60,6 +60,34 @@ avec la fonction : double & function element(const int & i);{return vec[i];}
 double fonc(double x, int der=0, double par=0){...}	#valeur par defaut
 
 inline double carre(double y){return y*y;}			#Macro en C
+```
+
+Macro
+---
+* [Change methode behavior or by pass](https://www.geeksforgeeks.org/print-geeksforgeeks-empty-main-c/)
+```
+#include <iostream>
+#include <string>
+
+#define FOO // is not possible to replace with comment symbole (all comments are removed before preproc) 
+#ifdef FOO
+void fizz(){}
+struct {
+    void fizz(){}
+}foo_;
+decltype(foo_)* foo() { return &foo_; }
+#endif // FOO
+
+int main()
+{
+    const std::string HW = "Hello World!\n";
+    std::cout << HW;
+    fizz();
+    foo()->fizz();
+    foo_.fizz();
+    foo();
+}
+```
 
 
 
