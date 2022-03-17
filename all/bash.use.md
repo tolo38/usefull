@@ -64,6 +64,7 @@ zenity					#make a GUI for shell scripts
 echo "o" | xargs -i echo "hell{} world !" #previous pipe output, call in middle of the command
 pv                                   #to monitor progress
 tar -xvf archive.tar.gz              #to extract
+mkdir -p "$d" && cp file "$d"        #copy and create destination dir if it does not exist
 ```
 
 
