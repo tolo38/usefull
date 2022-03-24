@@ -47,6 +47,16 @@ sever.dom:/path/to/file
 * Clean repo from untracked files
 `git clean -fd`
 
+* Diff staged changes
+`git diff --cached`
+
+* Backup changes and clean repo
+`git stash`
+Load changes again
+`git stash pop`
+Check changes in details
+`git stash show -p stash@{0}`
+
 ### Configuration
 
 pour ne pas avoir à tout le temps mettr user
@@ -79,6 +89,8 @@ vim .gitattributes
 move commit line bellow the one to merge with change `pick` to `s` 
 * view previous commit changes
 `git show HEAD[^#]`
+* renaming a file : git does it [automatically](https://stackoverflow.com/a/434078), it then all about display
+`git log -M20 -p --stat` with `-M` option help reduce the similarity threashold
 
 ### Branches
 `git checkout -b new_branch`
