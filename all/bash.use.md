@@ -11,10 +11,10 @@ curl cheat.sh
 - run in parallel `&` [metachar to run in backgroung]
 
 
-set bash options
-shopt -s expand_aliases (WARNING could have side effect)
+- **set bash options**
+`shopt -s` expand_aliases (WARNING could have side effect)
 
-- expend shell command
+- **expend shell command**
 `<ctrl> + <alt> + e`
 to set the shortcut edite `~/.inputrc` add a line with 
 ```"\e\C-e": alias-expand-line```
@@ -68,18 +68,18 @@ mkdir -p "$d" && cp file "$d"        #copy and create destination dir if it does
 ```
 
 
-delete empty directories
+- **delete empty directories**
 `find . -empty -type d -delete`
 
 
-match only/all directories : 
+- match only/all directories : 
     - cmd `*/`
     -`find . -type d -exec` cmd `{} \;`
 
-change extention :
+- change extention :
 `for f in *.OLDNAME; do mv $f `basename $f .OLDNAME`.NEWNAME; done;`
 
-ask for confirmation :
+- ask for confirmation :
 ```
 while true; do
     read -p "Continue (y/n)?" -n 1 -r
@@ -91,10 +91,20 @@ while true; do
 done
 ```
 
-`less` to display the file per centage `CTRL + G`
+- `less` to display the file per centage `CTRL + G`
 ```
 Type:
 Gg-M
+```
+
+- Short-cut hotkey binding to input next command [details](https://unix.stackexchange.com/a/578021)
+``` 
+# Exemple : ctrl+t add less at end of the current command
+function add_less_at_the_end(){
+     local l=$READLINE_LINE;
+     READLINE_LINE="$l | less";
+}
+bind -x '"\C-T": add_less_at_the_end'
 ```
 
 System Information
@@ -353,7 +363,8 @@ youtube-dl https://www.twitch.tv/videos/1234567890 -x --audio-format mp3 -v
 
 
 ### Links
-
+    
+* [Bash Reference Manual](https://www.gnu.org/software/bash/manual/bash.html)
 * [Cheatsheet](https://devhints.io/bash)
 * [Sed](https://www.grymoire.com/Unix/Sed.html)
 * [Awk](https://www.grymoire.com/Unix/Awk.html)
