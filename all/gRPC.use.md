@@ -17,8 +17,8 @@ target_link_libraries(bar ${Protobuf_LIBRARIES})
 
 ## Tutorials
 
-[gRPC](https://grpc.io/docs/languages/cpp/basics/)
-[google](https://developers.google.com/protocol-buffers/docs/cpptutorial)
+* [gRPC](https://grpc.io/docs/languages/cpp/basics/)
+* [google](https://developers.google.com/protocol-buffers/docs/cpptutorial)
 
 ## trouble shoot
 
