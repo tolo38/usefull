@@ -30,6 +30,10 @@ NEW ARRAY (4 columns)
 |Ctrl+Alt+Arrow|VSC|Add cursor|
 |Ctrl+Shift+P|VSC|See all commands|
 |Ctrl+k Ctrl+k|VSC|Key pressed to text|
+|Ctrl+/|VSC|Comment toggle selected lines|
+|Ctrl+Shift+[|VSC|  Fold current region|
+|Ctrl+Shift+]|VSC|Unfold current region|
+|[More key bindings]|||
 
 |Command|Action|Details|
 |-|-|-|
@@ -41,3 +45,4 @@ NEW ARRAY (4 columns)
 
 
 [vscode keybindings customization]: https://code.visualstudio.com/docs/getstarted/keybindings#_advanced-customization
+[More key bindings]: https://code.visualstudio.com/docs/getstarted/keybindings#_basic-editing
