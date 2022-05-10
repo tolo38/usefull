@@ -27,6 +27,7 @@ NEW ARRAY (4 columns)
 
 |Keys|Programme|Action|Details|
 |-|-|-|-|
+|Alt+Arrow|VSC|Left -> "workbench.action.navigateBack"|
 |Ctrl+Alt+Arrow|VSC|Add cursor|
 |Ctrl+Shift+P|VSC|See all commands|
 |Ctrl+k Ctrl+k|VSC|Key pressed to text|
