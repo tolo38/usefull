@@ -18,6 +18,7 @@ Hotkeys
 ||workbench.action.openGlobalKeybindingsFile|See edited shortcut bindings (in JSON file)|
 |**Modified**
 |Ctrl+j Ctrl+k||toggleVim|enable/disable VimPlugin| if vscodevim installed. Not neovim.
+|Ctrl+l||Clean output window if focused| when clause : `focusedView == 'workbench.panel.output'`
 |[More key bindings]
 
 Extentions
