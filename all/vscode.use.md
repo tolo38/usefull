@@ -8,9 +8,12 @@ Hotkeys
 |-|-|-|-|
 |Alt+Arrow|Left -> "workbench.action.navigateBack"||
 |Ctrl+Alt+Arrow||Add cursor|
+|Ctrl+P||Find file|
+|Ctrl+Shift+F||Find string in all projet|
 |Ctrl+Shift+P||See all commands|
 |Ctrl+k Ctrl+k||Key pressed to text|
 |Ctrl+/||Comment toggle selected lines|
+|"||Surround selection with quote|
 |Ctrl+Shift+[||  Fold current region|
 |Ctrl+Shift+]||Unfold current region|
 ||workbench.action.openGlobalKeybindings|See all commands and shortcut bindings (in settings)|[vscode keybindings customization]
@@ -18,7 +21,7 @@ Hotkeys
 ||workbench.action.openGlobalKeybindingsFile|See edited shortcut bindings (in JSON file)|
 |**Modified**
 |Ctrl+j Ctrl+k||toggleVim|enable/disable VimPlugin| if vscodevim installed. Not neovim.
-|Ctrl+l||Clean output window if focused| when clause : `focusedView == 'workbench.panel.output'`
+|Ctrl+l||Clean output window if focused| when clause : `focusedView == 'workbench.panel.output'` [edite when clause]
 |[More key bindings]
 
 Extentions
@@ -49,3 +52,4 @@ vscodevim.vim
 
 [vscode keybindings customization]: https://code.visualstudio.com/docs/getstarted/keybindings#_advanced-customization
 [More key bindings]: https://code.visualstudio.com/docs/getstarted/keybindings#_basic-editing
+[edite when clause]: https://code.visualstudio.com/api/references/when-clause-contexts
