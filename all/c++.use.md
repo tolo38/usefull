@@ -93,16 +93,16 @@ int main()
 
 variable
 --------
-int var(value)				déclaration
-++var					pré-incrémentation(l'expression = var; a la diff de var++ qui vaut = var+1;)
-const					constante
+- `int var(value)`				déclaration
+- `++var`					pré-incrémentation(l'expression = var; a la diff de var++ qui vaut = var+1;)
+- `const`					constante
 
 flux
 ----
-<iostream>				#include
-cout << var << endl			sortie + retour à la ligne
-cin >> var				entré
-cin.ignore(); getline(cin,var);		"vidé buffer" + lire ligne avec espace
+- `<iostream>`					#include
+- `cout << var << endl`				sortie + retour à la ligne
+- `cin >> var`					entré
+- `cin.ignore(); getline(cin,var);`		"vidé buffer" + lire ligne avec espace
 
 reference
 --------
@@ -115,32 +115,38 @@ reference
 </cite>
 les reference sont une étique qui pointe sur la meme case mémoir, mais non pas besoin d'être déreférencée
 Par defaut argument passage par copie;
-int& ref(var) 				creer une reference sur var 
-(int& var) 				force le passage par reférence 
+- `int& ref(var) `				creer une reference sur var 
+- `(int& var)`	 				force le passage par reférence 
 
 fonction
 ------
-[.h] (int var = default)		valeur par defaut
-(int const& var)			passage par reference constante : aprote juste de l'information( comme la lecture d'un livre, pas de copie, pas de modif)
-tableau attention passage par reference automatique
+- `[.h] (int var = default)`			valeur par defaut
+- `(int const& var)`				passage par reference constante : aprote juste de l'information( comme la lecture d'un livre, pas de copie, pas de modif)
+- tableau attention passage par reference automatique
 
 file
 ---
-tellg/tellp				position (in/out en fct du stream)
-seekg/seekp				deplacer (faire un clear() avant)
-->ios::beg/end/cur			where
-(string.c_str())			transform une string en tableau de char (utile pour la libC)
+- `tellg/tellp`				position (in/out en fct du stream)
+- `seekg/seekp`				deplacer (faire un clear() avant)
+- ->`ios::beg/end/cur`			where
+- `(string.c_str())`			transform une string en tableau de char (utile pour la libC)
 
 aleat
 ----
-<ctime>,<cstdlib>,srand(time(0));	initilisation
-rand()%x;				use
+- `<ctime>,<cstdlib>,srand(time(0));`	initilisation
+- `rand()%x;`				use
 
-poiteur
+array
+---
+- `int tab[24]`				initialise an array of 24 int
+- <cite>It is not possible to add elements into an array. An array has a constant number of elements through its lifetime</cite>
+- Therefore you need pointers
+	
+pointeur
 -------
-int *var(0)				initialiser un pointeur avec une address null
-var = new int				alloue la taille d'un int
-delete var				libere la mémoir alloue à var
+- `int *var(0)`				initialiser un pointeur avec une address null
+- `var = new int`			alloue la taille d'un int
+- `delete var`				libere la mémoir alloue à var
 
 class Objet{}; + Heritage
 ----
@@ -188,11 +194,13 @@ virtual void meth()=0;			methode virtuel pure
 
 Standar Lib (il y en a 15 qui vienne du C)
 ---------
-<cmath>					fct math
-<cctype>				type des char
-<ctime>					temps machine
-<cstdlib>				nombre aleatoir
-<cassert>				gestion des erreurs
+|Lib|Details|
+|-|-|
+|`<cmath>`				|fct math
+|`<cctype>`				|type des char
+|`<ctime>`				|temps machine
+|`<cstdlib>`				|nombre aleatoir
+|`<cassert>`				|gestion des erreurs
 
 STL
 ---
