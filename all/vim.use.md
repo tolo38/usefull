@@ -5,6 +5,7 @@ Text Editor
 
 Best cmd
 ---
+- `!vimtutor`
 - `:w !sudo tee %` save as root
 - `ctrl+q` undo `ctrl+s`
 - merge lines `Shif+J`
@@ -43,17 +44,26 @@ call macro with `@` `name`.
 
 buffer
 ---
-buffer : "x  x étant le nom du buffer (un par lettre) 
-bn - next
-bN - prev
-bd - del
+- buffer : "x  x étant le nom du buffer (un par lettre) 
+- `bn` - next
+- `bN` - prev
+- `bd` - del
 
 multiligne identical line bloc insert(usefull for block commenting)
-    -`ctrl+v` `]select` `maj+i` `]insert` `esc`
-    -`v` `]select` `:s/^/` `]insert` `/` `enter`
+    - `ctrl+v` `]select` `maj+i` `]insert` `esc`
+    - `v` `]select` `:s/^/` `]insert` `/` `enter`
 
 remaping
 ---
-note remaping ESC can cause unexpected behavior
-(exclamation mark turn command to toggle mode)
-nnoremap <n><l> :set hls!<cr>
+- note remaping ESC can cause unexpected behavior
+- (exclamation mark turn command to toggle mode)
+- `nnoremap <n><l> :set hls!<cr>`
+	
+- Create Snipet with vim
+`nnoremap ,html :-1read <file_path><CR>A` insert the file (at file_path) content under cursor ("A" insert at the end of the line)
+	
+advenced
+---
+- `fF` - go to next/prev occuence of char
+- `;,` - again
+- `{}` - go to next/prev paragraphe
