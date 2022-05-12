@@ -7,13 +7,14 @@ Hotkeys
 |Keys|Command|Action|Details|
 |-|-|-|-|
 |Alt+Arrow|Left -> "workbench.action.navigateBack"||
-|Ctrl+Alt+Arrow||Add cursor|
 |Ctrl+P||Find file|
 |Ctrl+Shift+F||Find string in all projet|
 |Ctrl+Shift+P||See all commands|
 |Ctrl+k Ctrl+k||Key pressed to text|
+|Ctrl+Alt+Arrow||Add cursor|
 |Ctrl+/||Comment toggle selected lines|
 |"||Surround selection with quote|
+|Ctrl+Space||Snippets|
 |Ctrl+Shift+[||  Fold current region|
 |Ctrl+Shift+]||Unfold current region|
 ||workbench.action.openGlobalKeybindings|See all commands and shortcut bindings (in settings)|[vscode keybindings customization]
