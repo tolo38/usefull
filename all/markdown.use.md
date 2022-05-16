@@ -2,6 +2,8 @@
 Markdowm
 ---
 
+[Cheatsheet]
+
 #### to make a title
 ```
 Markdown (H2)
@@ -34,9 +36,12 @@ Markdown (H2)
 #### hyperlink
 ```
 [title](http://page.com)
+[link]
+[link]: http://targer.io
 ```
 
 #### Quote
 >block quote
 ```>block quote```
 
+[Cheatsheet]: https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet
