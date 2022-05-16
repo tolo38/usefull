@@ -1,9 +1,9 @@
 GIT
 ===
 
-[Cheat-sheet - github](https://education.github.com/git-cheat-sheet-education.pdf)
+[Cheat-sheet - github]
 
-[Cheat-sheet - gitlab](https://about.gitlab.com/images/press/git-cheat-sheet.pdf)
+[Cheat-sheet - gitlab]
 
 
 ### Basic commands
@@ -40,6 +40,7 @@ sever.dom:/path/to/file
 `git pull`
 * Get Remote Branches
 `git fetch`
+(to Preview `git pull` Before update)
 
 * met a joure la branche maitre
 `git push`
@@ -71,14 +72,23 @@ touch .gitignore
 
 vim .gitattributes
 
-### advanced commands
+### Have a [Clean Repo] : Re-Clone
+```
+gpath=$(git rev-parse --show-toplevel)
+grepo=$(git config --get remote.origin.url)
+cd $gpath/..
+mv $gpath $gpath.old
+git clone $grepo
+```
+
+### Advanced commands
 
 * see the history
 `git reflog show` 
 * to revert initial git commit
 `git update-ref -d HEAD`
 * to deal with conflict when rebase or merge
-`git mergetool` usually [vimdiff](https://github.com/tolo38/usefull/blob/master/all/vimdiff.use.md)
+`git mergetool` usually [vimdiff]
 * pretty print of the graph
 `alias lg='git log --all --decorate --oneline --graph'`
 * modify last commit
@@ -91,6 +101,9 @@ move commit line bellow the one to merge with change `pick` to `s`
 `git show HEAD[^#]`
 * renaming a file : git does it [automatically](https://stackoverflow.com/a/434078), it then all about display
 `git log -M20 -p --stat` with `-M` option help reduce the similarity threashold
+* fix git ignore issues 
+`/!\ COMMIT BEFORE /!\ git rm -r --cached .`
+(Be careful, it removes all not commited local changes)
 
 ### Branches
 `git checkout -b new_branch`
@@ -101,12 +114,31 @@ git pull -p
 git checkout <branch>
 git rebase develop
 ```
+```
+*   (master) last commit				* (feature) older commit
+| * (feature) older commit		->		* (master) last commit
+|/							* old commit
+*   old commit						* ...
+```
+```
+git checkout feature
+git rebase master
+```
 
 ### log
 display changes made by commit 
 `git log --stat -M`
 display graph
 `git log --all --decorate --oneline --graph`
+
+### LFS (Large file system)
+Store Big Files (Binary, picture, ...) in your repo use [LFS]
+* start using lfs 
+`git lfs install`
+* set tracked file pattern
+
+* Download files from distant repo
+`git lfs pull`
 
 ### Test Driven Devellopment (TDD)
 * Create a branch from `develop`for the issue
@@ -117,3 +149,10 @@ display graph
 * Continue to the next feature until the issue has to be merged
 * It is easy to edit any commit with `git rebase -i ###~` with `###` the commit ID.
 * Use `git rebase --continue` to go for the next commit.
+
+
+[Cheat-sheet - github]: https://education.github.com/git-cheat-sheet-education.pdf
+[Cheat-sheet - gitlab]: https://about.gitlab.com/images/press/git-cheat-sheet.pdf
+[Clean Repo]: https://stackoverflow.com/a/42903805
+[LFS]: https://docs.gitlab.com/ee/topics/git/lfs/
+[vimdiff]: https://github.com/tolo38/usefull/blob/master/all/vimdiff.use.md
