@@ -34,10 +34,11 @@ To turn that back off use: set diffopt-=iwhite
   
 Git Mergetool
 --
-  
+
 * get Local/Base/Remote to file
  `:diffget Lo/Ba/Re`
 * get a specific line (" split the chunk")
 `v` select in visual mode, then `:diffget ...`
 * more at : `:help copy-diffs`
- 
+* `git mergetool` to call the merge tool and resole conflict
+* set vimdiff as the merge tool `git config merge.tool vimdiff` 
