@@ -11,6 +11,7 @@ Best cmd
 - merge lines `Shif+J`
 - `:!` run a command in term
 - as `%` match the whole file `:%!xxd` turn binary to hexadecimal
+- `:e .` open vimExplore in current directory
 
 Basic
 ---
@@ -67,3 +68,7 @@ advenced
 - `fF` - go to next/prev occuence of char
 - `;,` - again
 - `{}` - go to next/prev paragraphe
+- [Highlight Multiple] : find a set of words
+`/\vword1|word2|word3` using pipes `|` to separate words and `\v` for regular expression mode
+
+[Highlight Multiple]: https://stackoverflow.com/a/28875606
