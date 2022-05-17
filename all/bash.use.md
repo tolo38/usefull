@@ -91,6 +91,9 @@ while true; do
 done
 ```
 
+- [clipboard] `cat /dev/clip` Dump the contents of the clipboard.
+Under Windows 10+ or Cygwin, use `cat /dev/clipboard` or `clip`.
+
 - `less` to display the file per centage `CTRL + G`
 ```
 Type:
@@ -203,6 +206,11 @@ echo $result
 result2=$(myfunc)
 echo $result2
 ```
+Passing parameter to Bash function :
+**Nothing to put in between brackets** of `myfunc()`. `()` are opt. if use of `function`(deprecated). Otherwise `()` are required to define a function (and it is POSIX compatible
+-> parameter are positional as `$1`
+
+
 
 #### Options And Arguments
 
@@ -370,3 +378,5 @@ youtube-dl https://www.twitch.tv/videos/1234567890 -x --audio-format mp3 -v
 * [Awk](https://www.grymoire.com/Unix/Awk.html)
 * https://www.linuxjournal.com/content/return-values-bash-functions
 * [date exemple](http://www.gnu.org/software/coreutils/manual/html_node/Examples-of-date.html#Examples-of-date)
+
+[clipboard]: https://stackoverflow.com/a/750466
