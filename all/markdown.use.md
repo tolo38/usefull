@@ -4,6 +4,8 @@ Markdowm
 
 [Cheatsheet]
 
+[Github-Extended]
+
 #### to make a title
 ```
 Markdown (H2)
@@ -32,6 +34,16 @@ Markdown (H2)
     here the four space help to escape `
     ```
 ```
+- Hilighted code
+```C
+```C
+#include <stdio.h> 
+main( ) { 
+    printf("hello, world\n"); 
+} 
+    ```
+```
+
 
 #### hyperlink
 ```
@@ -45,3 +57,4 @@ Markdown (H2)
 ```>block quote```
 
 [Cheatsheet]: https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet
+[Github-Extended]: https://www.markdownguide.org/extended-syntax/
