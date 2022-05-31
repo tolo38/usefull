@@ -1,3 +1,5 @@
+
+```C
 #ifndef DEF_NOMDUFICHIER // Si la constante n'a pas été définie le fichier n'a jamais été inclus
 #define DEF_NOMDUFICHIER // On définit la constante pour que la prochaine fois le fichier ne soit plus inclus
 
@@ -35,3 +37,22 @@ int main(int argc, char *argv[])
 //passage dans une fonction
 //déreférencement
 //(*var).structelem   <=> var->structelem
+```
+
+Private
+---
+```C
+int private_f_real_name(void)
+{
+    ...
+}
+
+#define f private_f_real_name
+int g(void)
+{
+    // call f()
+}
+#undef f
+
+// calling f() now won't work
+```
