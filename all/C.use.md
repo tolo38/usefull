@@ -39,6 +39,18 @@ int main(int argc, char *argv[])
 //(*var).structelem   <=> var->structelem
 ```
 
+String
+---
+
+- To copy string buffer without adding null terminator `/0` 
+```C
+strncpy(sub1, baseString+8, 4);
+//<=>
+for(int i=0; i<4; i++)
+    sub3[i] = baseString[i+8];
+```
+
+
 Pointer
 ---
 ```C
