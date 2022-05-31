@@ -17,6 +17,8 @@ Hotkeys
 |Ctrl+Space||Snippets|
 |Ctrl+Shift+[||  Fold current region|
 |Ctrl+Shift+]||Unfold current region|
+|Ctrl+K Z|workbench.action.toggleZenMode|Zen Mode
+||
 ||workbench.action.openGlobalKeybindings|See all commands and shortcut bindings (in settings)|[vscode keybindings customization]
 ||workbench.action.openDefaultKeybindingsFile|See all commands and shortcut bindings (in JSON file)|
 ||workbench.action.openGlobalKeybindingsFile|See edited shortcut bindings (in JSON file)|
