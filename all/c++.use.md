@@ -97,6 +97,12 @@ variable
 - `++var`					pré-incrémentation(l'expression = var; a la diff de var++ qui vaut = var+1;)
 - `const`					constante
 
+- **Global** Integral Constant Expression (ICE)
+```cpp
+inline extern const int GLOBAL_CONST_VAR = 0xFF;
+```
+
+
 flux
 ----
 - `<iostream>`					#include
