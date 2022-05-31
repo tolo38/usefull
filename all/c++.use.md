@@ -104,6 +104,14 @@ flux
 - `cin >> var`					entré
 - `cin.ignore(); getline(cin,var);`		"vidé buffer" + lire ligne avec espace
 
+string
+---
+- `sprintf(Buffer,"Hello World");`		print formated string to a buffer 
+- `Buffer + strlen(Buffer)`			to append at the end of current buffer (or at any index)
+- `"%1d", _int`					int with 1 prepending `0`
+- `"%.1e", _int`				scientific notation with 1 decimal precision
+- `"%2s", _string`				string with 2 prepending spaces
+
 reference
 --------
 -- https://www.quora.com/Are-references-in-C++-stored-in-memory-like-pointers-or-not/answer/Lance-Diduck
