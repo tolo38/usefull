@@ -111,6 +111,20 @@ string
 - `"%1d", _int`					int with 1 prepending `0`
 - `"%.1e", _int`				scientific notation with 1 decimal precision
 - `"%2s", _string`				string with 2 prepending spaces
+```cpp
+const char *text =
+  "This text is pretty long, but will be "
+  "concatenated into just a single string. "
+  "The disadvantage is that you have to quote "
+  "each part, and newlines must be literal as "
+  "usual.";
+  
+const char *text2 =
+  "Here, on the other hand, I've gone crazy \
+and really let the literal span several lines, \
+without bothering with quoting each line's \
+content. This works, but you can't indent.";
+```
 
 reference
 --------
