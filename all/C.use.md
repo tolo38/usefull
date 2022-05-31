@@ -39,6 +39,25 @@ int main(int argc, char *argv[])
 //(*var).structelem   <=> var->structelem
 ```
 
+Pointer
+---
+```C
+void swapnum(int *num1, int *num2)
+{
+   int tempnum;
+
+   tempnum = *num1;
+   *num1 = *num2;
+   *num2 = tempnum;
+}
+int main( )
+{
+   int v1 = 11, v2 = 77 ;
+   swapnum( &v1, &v2 );
+}
+```
+
+
 Private
 ---
 ```C
