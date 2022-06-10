@@ -154,6 +154,10 @@ VAR="bla bla \
 bla"
 ```
 
+#### Print
+display variable in formated string with [`printf`]
+- clear the consol screen with [`printf "\033c"`]
+
 #### Boolean
 Boolean does not exist, instead :
 set/unset variable
@@ -380,3 +384,5 @@ youtube-dl https://www.twitch.tv/videos/1234567890 -x --audio-format mp3 -v
 * [date exemple](http://www.gnu.org/software/coreutils/manual/html_node/Examples-of-date.html#Examples-of-date)
 
 [clipboard]: https://stackoverflow.com/a/750466
+[`printf`]: https://en.wikipedia.org/wiki/Printf_format_string#:~:text=The%20width%20field%20may%20be,total%20width%20of%205%20characters.
+[`printf "\033c"`]: https://stackoverflow.com/a/5367075
