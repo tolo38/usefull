@@ -184,6 +184,10 @@ it solves quote escaping issues :
 var=('s1' 's2')
 echo "${var[@]}"
 ```
+to [copy][array-copy] an array access it with `@`
+```sh
+export bsrc=("${BASH_SOURCE[@]}")
+```
 
 
 How to 'grep' a continuous stream?
@@ -383,6 +387,7 @@ youtube-dl https://www.twitch.tv/videos/1234567890 -x --audio-format mp3 -v
 * https://www.linuxjournal.com/content/return-values-bash-functions
 * [date exemple](http://www.gnu.org/software/coreutils/manual/html_node/Examples-of-date.html#Examples-of-date)
 
+[array-copy]: https://stackoverflow.com/a/24323275
 [clipboard]: https://stackoverflow.com/a/750466
 [`printf`]: https://en.wikipedia.org/wiki/Printf_format_string#:~:text=The%20width%20field%20may%20be,total%20width%20of%205%20characters.
 [`printf "\033c"`]: https://stackoverflow.com/a/5367075
