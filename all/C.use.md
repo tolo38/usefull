@@ -50,6 +50,14 @@ for(int i=0; i<4; i++)
     sub3[i] = baseString[i+8];
 ```
 
+Array
+---
+If you want to know the **size** of an array `a`
+```C
+(sizeof(a)/sizeof(*a))
+```
+:warning:Mind that the above formula gives the allocated **size** not the usage.
+
 
 Pointer
 ---
@@ -87,3 +95,34 @@ int g(void)
 
 // calling f() now won't work
 ```
+
+Hardware
+---
+
+#### Register access
+
+directly set the address of a pointer, so that it behave as a register :
+```C
+uint32_t* Reg = (uint32_t*)0x12345678;
+```
+Then use is as an array
+```C
+read = Reg[0];
+Reg[1] = write;
+```
+See [memory-mapped I/O]
+
+#### Bit operation
+
+```C
+#define CHECK_BIT(var,pos) ((var) & (1<<(pos)))
+```
+use it this way to check the nth bit from the right end:
+```C
+CHECK_BIT(temp, n - 1)
+```
+In C++, you can use std::bitset.
+
+
+
+[memory-mapped I/O]: https://stackoverflow.com/a/2389273
