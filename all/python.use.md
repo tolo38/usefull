@@ -19,6 +19,19 @@ import mod						#instead of this load it in mod namespace
 dir(mod)						#provide the list of those names
 if __name__ == "__main__":		#at the end of a module: allow to test it
 ```
+##### List all available `modules`
+```py
+help("modules")
+```
+```bash
+pip list
+```
+More advenced option is to look for installed lib in file system:
+- to find the `/python/lib/` path run `help(<>)` with any modules`<>` and look for `FILE` output
+###### List module content
+- `help(<module>)`
+- `<module>.__dir__()`
+ 
 Variable
 ---
 `help(var) 		#Give us details about variable type, en fonctions`
