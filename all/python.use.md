@@ -2,7 +2,7 @@
 
 interpretor
 ---
-```
+```py
 python [-i src.py]				#mode interactif 
 _								#resultat precedent
 x**y							#x a la puissance y
@@ -12,7 +12,7 @@ float('NaN')					#valeur inexistante
 ```
 Module
 ---
-```
+```py
 from mod import	*				#load all the name in the curent namespace
 from mod import sub				#better practice
 import mod						#instead of this load it in mod namespace 
@@ -37,14 +37,14 @@ Variable
 
 boolean
 ---
-```
+```py
 a in b (a not in b)
 a is b (a is not b)
 and, or							#short-circuit operators
 ```
 Tableau(=Lists(=pile))
 ---
-
+```py
 (convention sur l'indice initial)
 +---+---+---+---+---+---+
 | P | y | t | h | o | n |
@@ -65,6 +65,7 @@ list(range(a,b))				#return a list from a(opt=0) to b-1
 								#NB : range() is an iterable object
 a in tab						#true if 'a' is in tab
 squares = [x**2 for x in range(10)]		#list comprehention
+```
 
 Matrix(nested list)
 ---
@@ -100,7 +101,7 @@ func							#function address
 def func(a1,a2=a):				#a1,a2 argument (a2 default value is a value)
 								#warning: The default value is evaluated only once
 def func(L=[]):					#Then L is allways the same list 
-```								#here is the solution
+```py								#here is the solution
 def f(a, L=None):
     if L is None:
         L = []
@@ -108,7 +109,7 @@ def f(a, L=None):
     return L
 ```
 def func(*args):				#args will contain the list of all passed arguments
-```
+```py
 def func(a : str)->int:
 	"""Documentation
 	on several lines
@@ -121,6 +122,7 @@ print(func.__annotations__)		#function attribute type(warning : c'est juste de l
 
 In/Out
 ---
+```py
 x = int(input("Please enter an integer: "))		#read a int from keyboard
 print(repr(x).rjust(2), repr(x*x).rjust(3), end=' ')
 print(repr(x*x*x).rjust(4))		#ajute les espace
@@ -133,7 +135,8 @@ read_data = f.read()			#read file
 f.closed						#test if the file is open/close
 f.write(b 'something')			#write something in f (b : opt, mean that it is a binary file
 seek(),tell()					#allow to move in the file
-
+```
+- `help('FORMATTING')` for more details
 
 Serializing
 ---
