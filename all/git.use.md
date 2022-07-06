@@ -137,6 +137,11 @@ Store Big Files (Binary, picture, ...) in your repo use [LFS]
 `git lfs install`
 * set tracked file pattern
 `git lfs track "*.iso" `
+* Add a new file. 
+Take care that is include in path of tracked files
+`git lfs track`
+Then add it
+`git add`
 * Download files from distant repo
 `git lfs pull`
 * If files where already in the repo
