@@ -24,3 +24,4 @@ NEW ARRAY (4 columns)
 |-|VS|Show current active file|[link](https://mattferderer.com/show-current-active-file-in-vs-studio-explorer)|
 |-|VS|Collapse solution explorer|[link](https://stackoverflow.com/a/24514803)|
 |Ctrl+K ctrl+X||Insert a snipet|
+|Ctrl+K ctrl+F||Auto format selection|
