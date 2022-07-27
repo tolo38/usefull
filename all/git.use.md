@@ -155,6 +155,12 @@ Then add it
 * If files where already in the repo
 `git lfs migrate import --include="*.lib,*.dll"`
 
+### Submodules
+* Populate submodule folder after cloning
+`git submodule update --init --recursive`
+* Or directly while cloning
+`git clone --recurse-submodules`
+
 ### Test Driven Devellopment (TDD)
 * Create a branch from `develop`for the issue
 * ~~Create a branch from `issue` by feature/behavior~~
