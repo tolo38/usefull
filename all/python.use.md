@@ -42,6 +42,12 @@ a in b (a not in b)
 a is b (a is not b)
 and, or							#short-circuit operators
 ```
+Ternary operator
+---
+```py
+'true' if True else 'false'
+```
+
 Tableau(=Lists(=pile))
 ---
 ```py
@@ -65,6 +71,7 @@ list(range(a,b))				#return a list from a(opt=0) to b-1
 								#NB : range() is an iterable object
 a in tab						#true if 'a' is in tab
 squares = [x**2 for x in range(10)]		#list comprehention
+sum([1 for x in frequencies if x > 0])		#conditionnal list comprehension
 ```
 
 Matrix(nested list)
@@ -179,7 +186,9 @@ ToUnderstand
 
 Pandas
 ---
+- [Pandas Basic]
 - make a csv `panda.DataFrame(data).to_csv("file.csv")`
+- [Pandas shift data]
 
 [Deamon]
 ---
@@ -211,5 +220,7 @@ automate browser
 [deamon-script]: https://stackoverflow.com/a/49123627
 [deamon-windows]: https://stackoverflow.com/a/59125542
 [pep448]: https://peps.python.org/pep-0448/
+[pandas basic]: https://pandas.pydata.org/docs/user_guide/10min.html?highlight=group
+[pandas shift data]: https://towardsdatascience.com/all-the-pandas-shift-you-should-know-for-data-analysis-791c1692b5e
 [selenium]: https://www.selenium.dev/
 [subprocess]: https://docs.python.org/3/library/subprocess.html
