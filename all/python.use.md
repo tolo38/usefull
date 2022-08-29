@@ -138,12 +138,25 @@ print('%d %d %d' % x, x*x, x*x*x)		#ancien methode
 print('{!s} {a1:.3}'.format(x, a1=math.pi))	#!s do as str() converti en string
 f = open('file', 'w')			#open a file
 with open('workfile') as f:		#better practice
-read_data = f.read()			#read file
+read_data = f.read()			#read file (-> all document into one string)
+		.readlines()		#read juste the next line -> into a string
 f.closed						#test if the file is open/close
 f.write(b 'something')			#write something in f (b : opt, mean that it is a binary file
 seek(),tell()					#allow to move in the file
 ```
 - `help('FORMATTING')` for more details
+
+Command Line Arguments
+---
+Command line arguments are in the array `sys.args`
+```py
+import sys
+
+if __name__ == "__main__":
+    print(f"Arguments count: {len(sys.argv)}")
+    for i, arg in enumerate(sys.argv):
+        print(f"Argument {i:>6}: {arg}")
+```
 
 Serializing
 ---
