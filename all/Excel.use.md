@@ -1,0 +1,3 @@
+# Excel
+
+- `COUNTIFS` conditional count
