@@ -174,8 +174,12 @@ Pakage :
 
 ToUnderstand
 ---
-- `*a`
+- `*a` the "splat operator" unpack sequence (such as generator) see [PEP448] for more detail
 - `**a`
+
+Pandas
+---
+- make a csv `panda.DataFrame(data).to_csv("file.csv")`
 
 [Deamon]
 ---
@@ -197,10 +201,15 @@ autoit.control_send("[CLASS:Notepad]", "Edit1", "reminder{!}")
 autoit.win_close("[CLASS:Notepad]")
 autoit.control_click("[Class:#32770]", "Button2")
 ```
+[Selenium]
+---
+automate browser
 
 [autoit]: https://pypi.org/project/PyAutoIt/
 [deamon]: https://pypi.org/project/python-daemon/
 [deamon-linux]: https://janakiev.com/blog/python-background/
 [deamon-script]: https://stackoverflow.com/a/49123627
 [deamon-windows]: https://stackoverflow.com/a/59125542
+[pep448]: https://peps.python.org/pep-0448/
+[selenium]: https://www.selenium.dev/
 [subprocess]: https://docs.python.org/3/library/subprocess.html
