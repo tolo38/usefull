@@ -263,6 +263,35 @@ page 566
 
 [Standard library](https://en.cppreference.com/w/cpp/header)
 
+Exception
+---
+```c++
+// exception::what
+#include <iostream>       // std::cout
+#include <exception>      // std::exception
+
+struct ooops : std::exception {
+  const char* what() const noexcept {return "Ooops!\n";}
+};
+
+int main () {
+  try {
+      throw ooops();
+  } catch (std::exception& ex) {
+      std::cout << ex.what();
+  }
+  return 0;
+}
+```
+Catch all exception with `...`
+```c++
+try{
+    // ...
+} catch (...) {
+    // ...
+}
+```
+	
 Template - Généricité
 -------------------
 template<typename T>			indique que la méthode ou la class est générique via l'element T.
