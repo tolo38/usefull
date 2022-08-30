@@ -12,3 +12,9 @@
 // which value(itself [it could be a neighboring value]) is above 150 
 =INDEX(A2:A16,MATCH(TRUE,INDEX(A2:A16>150,0),))
 ```
+
+### Time
+Converte number of second to time
+```go
+ =A2/86400
+ ```
