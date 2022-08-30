@@ -60,8 +60,10 @@ If you want to know the **size** of an array `a`
 ```C
 (sizeof(a)/sizeof(*a))
 ```
-:warning:Mind that the above formula gives the allocated **size** not the usage.
+:warning:Mind that the above formula gives the allocated **size** not the usage.  
 
+Initializing array do not need size `int t[] = {1,2}`  
+but only for the first dimention (if multidimentional) : `int t[][2][1] = {{{4},{3}},{{5},{12}},...}`
 
 Pointer
 ---
