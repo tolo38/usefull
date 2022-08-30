@@ -2,6 +2,7 @@
 
 - `Ctrl`+<kbd>&darr;</kbd> : jumpe to last value (before (not)empty)
 - **Next value change** : Highlight the column you are interested in; Press `Ctrl+Shift+\`
+- [Move selection]
 
 ### Functions
 - `COUNTIFS` conditional count
@@ -18,3 +19,4 @@ Converte number of second to time
 ```go
  =A2/86400
  ```
+[Move selection]: https://superuser.com/a/673820
