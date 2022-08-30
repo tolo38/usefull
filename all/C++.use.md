@@ -110,6 +110,13 @@ flux
 - `cin >> var`					entré
 - `cin.ignore(); getline(cin,var);`		"vidé buffer" + lire ligne avec espace
 
+input
+---
+Use `getch()` (need `#include <conio.h>`).  
+Use `getchar()` (expected for Enter, need `#include <iostream>`).  
+Use `cin.get()` (expected for Enter, need `#include <iostream>`).  
+Use `system("pause")` (need `#include <iostream>`, Windows only).  
+
 string
 ---
 - `sprintf(Buffer,"Hello World");`		print formated string to a buffer 
@@ -169,6 +176,11 @@ array
 - `int tab[24]`				initialise an array of 24 int
 - <cite>It is not possible to add elements into an array. An array has a constant number of elements through its lifetime</cite>
 - Therefore you need pointers
+	
+namespace
+---
+Is the best way to organise and split the code into private chunk  
+use anonyme namespace to hide variable to the outside
 	
 pointeur
 -------
