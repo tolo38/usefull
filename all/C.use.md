@@ -50,6 +50,10 @@ for(int i=0; i<4; i++)
     sub3[i] = baseString[i+8];
 ```
 
+Computing
+---
+Integer Division gives an integer (remember to cast) : `1/(float)2` 
+
 Array
 ---
 If you want to know the **size** of an array `a`
