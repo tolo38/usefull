@@ -1,5 +1,9 @@
 # Excel
 
+- `Ctrl`+<kbd>&darr;</kbd> : jumpe to last value (before (not)empty)
+- **Next value change** : Highlight the column you are interested in; Press `Ctrl+Shift+\`
+
+### Functions
 - `COUNTIFS` conditional count
 - `INDEX` captur data on condition
 ```go
