@@ -121,6 +121,7 @@ string
 ---
 - `sprintf(Buffer,"Hello World");`		print formated string to a buffer 
 - `Buffer + strlen(Buffer)`			to append at the end of current buffer (or at any index)
+- `std::to_string(_int)`			to turn a `int` into a string
 - `"%1d", _int`					int with 1 prepending `0`
 - `"%.1e", _int`				scientific notation with 1 decimal precision
 - `"%2s", _string`				string with 2 prepending spaces
