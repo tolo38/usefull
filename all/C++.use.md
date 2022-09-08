@@ -175,12 +175,12 @@ int main()
 ```
 an lvalue is
 >an expression that has identity and cannot be moved from. 
-use `&&` to force function argument to be lvalue
 
 So, there's no such thing as an lvalue object, but there is an object which is locally named (or referred to) by an lvalue expression
 
 an rvalue is
 >an expression that is either a prvalue or an xvalue. It can be moved from. It may or may not have identity.
+use `&&` to force function argument to be lvalue
 
 a prvalue (pure rvalue) is
 >roughly an expression referring to an un-named temporary object: we can't convert our lvalue expression to one of these IIUC.
