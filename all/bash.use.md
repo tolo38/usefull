@@ -179,7 +179,7 @@ Note: be carefull with ternary operator order,
 it can have side effect if you do not concidere
 the lazy evalution.
 
-#### [conditions]
+#### [Conditions]
 ```sh
 read n
 if ! ((n % 4)); then
