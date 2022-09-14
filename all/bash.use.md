@@ -179,7 +179,26 @@ Note: be carefull with ternary operator order,
 it can have side effect if you do not concidere
 the lazy evalution.
 
+#### [conditions]
+```sh
+read n
+if ! ((n % 4)); then
+    echo "$n divisible by 4."
+fi
+The (( )) operator evaluates expressions as C arithmetic, and has a boolean return.
 
+Hence, (( 0 )) is false, and (( 1 )) is true. [1]
+
+The $(( )) operator also expands C arithmetic expressions, but instead of returning true/false, it returns the value instead. Because of this you can test the output if $(( )) in this fashion: [2]
+
+[[ $(( n % 4 )) == 0 ]]
+But this is tantamount to: if (function() == false). Thus the simpler and more idiomatic test is:
+
+! (( n % 4 ))
+[1]: Modern bash handles numbers up to your machine's intmax_t size.
+
+[2]: Note that you can drop $ inside of (( )), because it dereferences variables within.
+```
 #### Arrays
 Bash arrays : are recommended to store part of a commande line
 it solves quote escaping issues :
@@ -469,6 +488,7 @@ youtube-dl https://www.twitch.tv/videos/1234567890 -x --audio-format mp3 -v
 
 [array-copy]: https://stackoverflow.com/a/24323275
 [clipboard]: https://stackoverflow.com/a/750466
+[conditions]: https://linuxhint.com/bash_conditional_statement/
 [more-mask]: https://en.wikipedia.org/wiki/Mask_(computing)
 [`printf`]: https://en.wikipedia.org/wiki/Printf_format_string#:~:text=The%20width%20field%20may%20be,total%20width%20of%205%20characters.
 [`printf "\033c"`]: https://stackoverflow.com/a/5367075
