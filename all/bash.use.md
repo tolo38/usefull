@@ -75,6 +75,9 @@ mkdir -p "$d" && cp file "$d"        #copy and create destination dir if it does
 - match only/all directories : 
     - cmd `*/`
     -`find . -type d -exec` cmd `{} \;`
+    
+- test if directory exist
+`[ -d "/path/to/dir" ] && echo "Directory /path/to/dir exists."`
 
 - change extention :
 `for f in *.OLDNAME; do mv $f `basename $f .OLDNAME`.NEWNAME; done;`
