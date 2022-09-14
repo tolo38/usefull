@@ -321,6 +321,20 @@ if (( (var1 & 0x3) == 0x2 )); then
 More
 ---
 
+### GPIOs
+```sh
+echo "240" > /sys/class/gpio/export
+```
+then the GPIO pin will exposed in this directory, using 240 as example, `/sys/class/gpio240/` There will be at least two files created after the export, `/sys/class/gpio240/value` and `/sys/class/gpio240/direction`
+You can interact with them using cat to read them, e.g. 
+```sh
+cat /sys/class/gpio240/value
+```
+and modify it using echo: 
+```sh
+echo 1 > /sys/class/gpio240/value
+```
+
 ### Sed
 
 `\(``\)` give the possibility of delimiter a parts of the pattern that you can letter refer to with `\1`
