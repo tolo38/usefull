@@ -317,6 +317,48 @@ if (( (var1 & 0x3) == 0x2 )); then
 ```
 [more-mask]
 
+#### Arithmetic
+```sh
+$ echo "$((0x12345678 << 1))"
+610839792
+Or:
+
+$ echo "$(( 16#12345678 << 1 ))"
+610839792
+The value could be set in a variable as well:
+
+$ var=0x12345678         # or var=16#12345678
+$ echo "$(( var << 1 ))"
+610839792
+And you can do OR, AND, XOR and/or NOT:
+
+$ echo "$(( 0x123456 | 0x876543 ))"
+9925975
+And to get the result in hex as well:
+
+$ printf '%X\n' "$(( 0x12345678 | 0xDEADBEEF ))"     # Bitwise OR
+DEBDFEFF
+
+$ printf '%X\n' "$(( 0x12345678 & 0xDEADBEEF ))"     # Bitwise AND
+12241668
+
+$ printf '%X\n' "$(( 0x12345678 ^ 0xDEADBEEF ))"     # Bitwise XOR
+CC99E897
+
+$ printf '%X\n' "$(( ~ 0x2C8B ))"                    # Bitwise NOT
+FFFFFFFFFFFFD374
+The only detail with a bitwise not (~) is that it flips all available bits. If the number representation use 64 bits, the result will have 64 bits. All leading zero bits will be flipped to ones.
+
+To limit such conversion, just use an AND:
+
+$ printf '%X\n' "$(( ( ~ 0x2C8B ) & 0xFFFF ))"
+D374
+Note that a bitwise NOT ~ is not a logical NOT !. A logical NOT turns input into 0 or 1 only, not any other number.
+
+$ printf '%X\n' "$(( ! 0xdead ))" "$(( ! 0 ))"
+0
+1
+```
 
 More
 ---
