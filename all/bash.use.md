@@ -296,6 +296,27 @@ echo in $folder2 folder
 echo remians ${sub[@]}
 ```
 
+#### Binary and Masks
+
+```sh
+printf '\x03' > file   # Hex
+printf '\003' > file   # Octal
+#If you have binary, it's a bit tricker, but you can turn it into octal with:
+printf '%o\n' "$((2#00000011))"
+```
+```sh
+Bit manipulation is supported in POSIX arithmetic expressions:
+
+if [ $(( var1 & 0x3 )) -eq $(( 0x2 )) ]; then
+However, it's a bit simpler use an arithmetic statement in bash:
+
+if (( (var1 & 0x3) == 0x2 )); then
+```
+[more-mask]
+
+
+More
+---
 
 ### Sed
 
@@ -389,5 +410,7 @@ youtube-dl https://www.twitch.tv/videos/1234567890 -x --audio-format mp3 -v
 
 [array-copy]: https://stackoverflow.com/a/24323275
 [clipboard]: https://stackoverflow.com/a/750466
+[more-mask]: https://en.wikipedia.org/wiki/Mask_(computing)
 [`printf`]: https://en.wikipedia.org/wiki/Printf_format_string#:~:text=The%20width%20field%20may%20be,total%20width%20of%205%20characters.
 [`printf "\033c"`]: https://stackoverflow.com/a/5367075
+    
