@@ -76,3 +76,11 @@ more [Arrows]
 
 [Arrows]: https://stackoverflow.com/questions/54954544/how-do-i-show-the-up-and-down-arrow-keyboard-key-in-github-markdown
 
+#### [Emoji]
+
+:grinning:	:smiley: :smile:	:grin:
+:laughing: :satisfied:	:sweat_smile:
+:rofl:	:joy:	:slightly_smiling_face:	
+:upside_down_face:	:wink:	:blush: :innocent:
+
+[Emoji]: https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md
