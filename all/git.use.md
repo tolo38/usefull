@@ -160,6 +160,7 @@ Then add it
 `git submodule update --init --recursive`
 * Or directly while cloning
 `git clone --recurse-submodules`
+* `(untracked content)` or `+Subproject commit ###-dirty` means that submodule content has some change (Not an issue)
 
 ### Test Driven Devellopment (TDD)
 * Create a branch from `develop`for the issue
