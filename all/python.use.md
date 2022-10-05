@@ -136,6 +136,9 @@ print(repr(x*x*x).rjust(4))		#ajute les espace
 print('{0:2d} {1:3d} {2:4d}'.format(x, x*x, x*x*x))	#affiche la même chose
 print('%d %d %d' % x, x*x, x*x*x)		#ancien methode
 print('{!s} {a1:.3}'.format(x, a1=math.pi))	#!s do as str() converti en string
+"a string {2} {4} {3} format{5}".format( 0, "toto", *[i for i in ["that", "be", "could"]] + ["ed", "-"], "and more...")
+"a string {2} {4} {3} format{5}".format( 0, "toto", *[i for i in ["that", "be", "could"]] + ["ed", "-"], "and more...")
+
 f = open('file', 'w')			#open a file
 with open('workfile') as f:		#better practice
 read_data = f.read()			#read file (-> all document into one string)
