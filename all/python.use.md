@@ -174,10 +174,13 @@ Parsing(RegExp)
 
 Class
 ---
+```py
 class MyClass:					#new class declaration
 MyClass.f					#attribute reference
 x = MyClass()					#instantiation
 def __init__(self):				#constructor
+E = type('',(object,),{})()			#lambda object anonymous class
+```
 
 Note
 ---
