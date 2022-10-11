@@ -256,6 +256,44 @@ while True:             # Event Loop
         break
 window.close()
 ```
+`,mouseover_colors=('white', "#5f5")`
+```py
+import PySimpleGUI as sg
+sg.theme('Dark Blue 3')
+layout = [  [sg.Text('Move mouse over me', key='-TEXT-')],
+            [sg.In(key='-IN-')],
+            [sg.Button('Move mouse over me', key='-BUTTON-',border_width=0, button_color=('white','#2fa4e7'),font=('sans-serif',14),), sg.Button('Exit')] ]
+
+window = sg.Window('Window Title', layout, finalize=True)
+#window['-BUTTON-'].bind('<Enter>', '+MOUSE OVER+')
+#window['-BUTTON-'].bind('<Leave>', '+MOUSE AWAY+')
+
+print([e for e in window.element_list() if isinstance(e,sg.Button)])
+for e in window.element_list():
+    if isinstance(e,sg.Button):
+        print(e)
+        e.bind('<Enter>', '+MOUSE OVER+')
+        e.bind('<Leave>', '+MOUSE AWAY+')
+        
+i = 0
+while True:             # Event Loop
+    event, values = window.read()
+    print(event)
+    if '-BUTTON-' in event:
+        i = i+1
+        window['-BUTTON-'].update(i,button_color=('white','#fa4'))
+    #if event=='-BUTTON-+MOUSE OVER+':
+    #    window['-BUTTON-'].update(button_color = ('white','#178acc'))
+    #if event == '-BUTTON-+MOUSE AWAY+':
+    #    window['-BUTTON-'].update(button_color=('white','#2fa4e7'))
+    if '+MOUSE OVER+' in event:
+        window[event.removesuffix('+MOUSE OVER+')].update(button_color = ('white','#178acc'))
+    if '+MOUSE AWAY+' in event:
+        window[event.removesuffix('+MOUSE AWAY+')].update(button_color = ('white','#2fa4e7'))
+    if event in (None, 'Exit'):
+        break
+window.close()
+```
 
 [Selenium]
 ---
