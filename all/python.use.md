@@ -4,11 +4,13 @@ interpretor
 ---
 ```py
 python [-i src.py]				#mode interactif 
-_								#resultat precedent
-x**y							#x a la puissance y
-"un"+" peu"						#concatenate
-pass							#"Nop" statment: do nothing
+_						#resultat precedent
+x**y						#x a la puissance y
+"un"+" peu"					#concatenate
+pass						#"Nop" statment: do nothing
 float('NaN')					#valeur inexistante
+5/2	#=2.5					#floating division
+5//2	#=2					#integer division
 ```
 Module
 ---
