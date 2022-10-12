@@ -396,6 +396,8 @@ and modify it using echo:
 echo 1 > /sys/class/gpio240/value
 ```
 
+- `devmem` is a good alternative that directly mmaps `/dev/mem`
+
 ### Sed
 
 `\(``\)` give the possibility of delimiter a parts of the pattern that you can letter refer to with `\1`
