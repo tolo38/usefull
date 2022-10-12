@@ -211,6 +211,7 @@ aleat
 array
 ---
 - `int tab[24]`				initialise an array of 24 int
+- `int tab[] = {1, 2, 3, 4}`		initialise an array of  4 int ( implicitly)
 - <cite>It is not possible to add elements into an array. An array has a constant number of elements through its lifetime</cite>
 - Therefore you need pointers
 	
