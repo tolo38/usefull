@@ -382,7 +382,7 @@ $ printf '%X\n' "$(( ! 0xdead ))" "$(( ! 0 ))"
 More
 ---
 
-### GPIOs
+### [GPIOs]
 ```sh
 echo "240" > /sys/class/gpio/export
 ```
@@ -489,6 +489,7 @@ youtube-dl https://www.twitch.tv/videos/1234567890 -x --audio-format mp3 -v
 [array-copy]: https://stackoverflow.com/a/24323275
 [clipboard]: https://stackoverflow.com/a/750466
 [conditions]: https://linuxhint.com/bash_conditional_statement/
+[gpios]: https://www.thegoodpenguin.co.uk/blog/stop-using-sys-class-gpio-its-deprecated/
 [more-mask]: https://en.wikipedia.org/wiki/Mask_(computing)
 [`printf`]: https://en.wikipedia.org/wiki/Printf_format_string#:~:text=The%20width%20field%20may%20be,total%20width%20of%205%20characters.
 [`printf "\033c"`]: https://stackoverflow.com/a/5367075
