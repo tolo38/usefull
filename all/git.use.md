@@ -93,7 +93,7 @@ git clone $grepo
 `alias lg='git log --all --decorate --oneline --graph'`
 * modify last commit
 `git commit --amend` (need `add`before) if already pushed add force option `git push --force`
-* to modify previous commit 
+* to modify previous commit [split]
 `git commit rebase -i` use `HEAD~#` 
   * then squash
 move commit line bellow the one to merge with change `pick` to `s` 
@@ -177,4 +177,5 @@ Then add it
 [Cheat-sheet - gitlab]: https://about.gitlab.com/images/press/git-cheat-sheet.pdf
 [Clean Repo]: https://stackoverflow.com/a/42903805
 [LFS]: https://docs.gitlab.com/ee/topics/git/lfs/
+[Split]: https://stackoverflow.com/a/6217314/19624015
 [vimdiff]: https://github.com/tolo38/usefull/blob/master/all/vimdiff.use.md
