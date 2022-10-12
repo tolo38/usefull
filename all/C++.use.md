@@ -215,7 +215,7 @@ array
 - <cite>It is not possible to add elements into an array. An array has a constant number of elements through its lifetime</cite>
 - Therefore you need pointers
 	
-namespace
+[namespace]
 ---
 Is the best way to organise and split the code into private chunk  
 use anonyme namespace to hide variable to the outside
@@ -413,4 +413,5 @@ template<typename T,typename S>		on peux en avoir plusieurs
 template <> meth<Obj>			spécification : permet de définir la methode dans le cas ou on applique le template sur un Obj
 ```	
 	
+[namespace]: https://en.cppreference.com/w/cpp/language/namespace
 [time convertion]: https://stackoverflow.com/a/31258680/19624015
