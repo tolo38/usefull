@@ -295,6 +295,19 @@ while True:             # Event Loop
 window.close()
 ```
 
+[PyInstaller]
+---
+
+commande line example : `!pyinstaller -w --onefile --hidden-import=PySimpleGUI MyGUI.py --noconsole --add-binary ./submodule/My.dll;. --icon=app.ico --add-data app.ico;. --clean`
+
+after a `MyGUI.spec` is created and can generate the exe with `pyinstaller --clean MyGUI.spec`
+
+```py
+# Code to find the icon
+iconPath = sys._MEIPASS + '\\' if 'sys' in dir() and hasattr(sys, '_MEIPASS') else  ''
+iconPath += 'app.ico'
+```
+
 [Selenium]
 ---
 automate browser
@@ -307,5 +320,6 @@ automate browser
 [pep448]: https://peps.python.org/pep-0448/
 [pandas basic]: https://pandas.pydata.org/docs/user_guide/10min.html?highlight=group
 [pandas shift data]: https://towardsdatascience.com/all-the-pandas-shift-you-should-know-for-data-analysis-791c1692b5e
+[pyinstaller]: https://pyinstaller.org/en/stable/usage.html
 [selenium]: https://www.selenium.dev/
 [subprocess]: https://docs.python.org/3/library/subprocess.html
