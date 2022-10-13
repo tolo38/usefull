@@ -282,11 +282,13 @@ Standar Lib (il y en a 15 qui vienne du C)
 
 STL
 ---
+```C++
 permet d'utiliser des conteneurs
 <vector>				class vector est un conteneur
 push_back();pop_back();			ajouter retirer un élément d'un conteneur
 vector<int>::iterator it;		déclare un itérateur : les itérateur sont "une surcharge" des pointeurs
 for(it = c.begin(); it!=d.end(); ++it)	foreach *it element in conteneur c
+for (const auto& [key, value] : myMap){	//C++17- foreach
 <fonctional>				foncteur de la STL
 <algorithm>				modificateur de la STL
 generate(c.begin(),c.end(),f);		remplie le conteneur c de begin() à end() grace au foncteur f 
@@ -296,7 +298,7 @@ for_each(c.begin(),c.end(),f);		applique le foncteur f au conteneur c de begin()
 transform();				permet de réaliser une opération de type a+b=c entre des conteneurs;
 <iterator>				iterateur de la STL
 Le type des iterator varie selon le conteneur auquel il est associé (5 types : bilateral, random acces, readOnly, writeOnly, ?)
-
+```
 page 566
 
 [Standard library](https://en.cppreference.com/w/cpp/header)
