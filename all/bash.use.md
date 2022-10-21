@@ -102,6 +102,7 @@ Under Windows 10+ or Cygwin, use `cat /dev/clipboard` or `clip`.
 Type:
 Gg-M
 ```
+Read **live file** with `less +F <filename>`
 
 - Short-cut hotkey binding to input next command [details](https://unix.stackexchange.com/a/578021)
 ``` 
