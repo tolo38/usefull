@@ -117,6 +117,27 @@ Use `getchar()` (expected for Enter, need `#include <iostream>`).
 Use `cin.get()` (expected for Enter, need `#include <iostream>`).  
 Use `system("pause")` (need `#include <iostream>`, Windows only).  
 
+Argument
+---
+```c++
+int main(int argc, char * argv[]) {
+
+  if (argv[1] == "yes"); // Wrong, compares two pointers
+  if (strcmp(argv[1], "yes") == 0); // This compares what the pointers point to
+  if (std::string(argv[1]) == "yes"); // Works fine
+  if (argv[1] == std::string("yes")); // Works fine
+
+  // Easy-mode    
+  std::vector<std::string> args(argv, argv+argc);
+  for (size_t i = 1; i < args.size(); ++i) {
+      if (args[i] == "yes") {
+          // do something
+      }
+  }
+
+}
+```
+
 string
 ---
 - `sprintf(Buffer,"Hello World");`		print formated string to a buffer 
@@ -213,7 +234,12 @@ array
 - `int tab[24]`				initialise an array of 24 int
 - `int tab[] = {1, 2, 3, 4}`		initialise an array of  4 int ( implicitly)
 - <cite>It is not possible to add elements into an array. An array has a constant number of elements through its lifetime</cite>
-- Therefore you need pointers
+   - Therefore you need pointers
+- Index vs Pointer : 
+> indexes are more robust, because they often survive array reallocation. 
+
+ex : a dynamic array where element are added at the end
+> it can take half the space with 32-bit indices instead of 64-bit address (value stored in pointer) (assuming you don't need more than ~4.3 billion elements).
 	
 [namespace]
 ---
