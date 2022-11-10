@@ -429,6 +429,17 @@ you can look for header file you need to include with www.debian.org
     click `packages` and look for *Search the contents of packages*
     and check `packages that contain files named like this`
 
+### Pipe Files
+    
+```sh
+mkfifo pipe
+```
+Turn a console into an text output window
+```sh
+gnome-terminal -- bash -c "tail -f pipe;exec bash"
+cat > pipe
+```
+    
 ### Temporary files
 
 ```
