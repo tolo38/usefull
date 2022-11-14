@@ -372,7 +372,7 @@ gcc -lsvl -L/my/path/ # exemple to add svl library ... remember that each lib ha
 [for more details](https://caiorss.github.io/C-Cpp-Notes/compiler-flags-options.html)
 - or use [camke](cmake.use.md)
 
-##### Conan
+##### [Conan]
 add a conanfile.py at root : 
 ```py
 from conans import ConanFile, CMake, tools
@@ -484,5 +484,6 @@ template<typename T,typename S>		on peux en avoir plusieurs
 template <> meth<Obj>			spécification : permet de définir la methode dans le cas ou on applique le template sur un Obj
 ```	
 	
+[Conan]: https://kubasejdak.com/introduction-to-conan-package-manager
 [namespace]: https://en.cppreference.com/w/cpp/language/namespace
 [time convertion]: https://stackoverflow.com/a/31258680/19624015
