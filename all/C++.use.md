@@ -372,6 +372,49 @@ gcc -lsvl -L/my/path/ # exemple to add svl library ... remember that each lib ha
 [for more details](https://caiorss.github.io/C-Cpp-Notes/compiler-flags-options.html)
 - or use [camke](cmake.use.md)
 
+##### Conan
+add a conanfile.py at root : 
+```py
+from conans import ConanFile, CMake, tools
+
+class PackageConan(ConanFile):
+    name = ""
+    version = "0.0.1"
+    license = "Proprietary"
+    author = "tolo"
+    description = "...project"
+
+    settings = "os", "compiler", "build_type", "arch"
+    # maybe switch in the future to "CMakeDeps"
+    # the cmake generator is necessary to generate a variable map that is used to find NSIS exe
+    generators = ["cmake_find_package", "cmake"]
+
+    requires = [
+        "gtk/4.0.2"
+    ]
+
+    def build_requirements(self):
+        if self.settings.os == "Windows":
+            self.build_requires("NSIS/3.08@z43/stable")
+
+    def build(self):
+        cmake = CMake(self)
+        cmake.configure()
+        cmake.build()
+
+    def imports(self):
+        self.copy("*.dll", "", "bin")
+        self.copy("*.so*", "", "lib")
+```
+
+- find lib(to add in requires) with : `conan search gtk -r=all`
+
+- run `CMake:Configure` (ctrl+shift+p in VScode)
+
+- then inside `build` folder there is `Find<lib>.cmake` file, search for `add_library()` so that to add the right dependecy in `CMakeLists.txt`->`target_link_libraries()` (in the subdirectory)
+- needs also `find_package(gtk REQUIRED)` (in root `CMakeLists.txt`)
+
+
 lambda function
 -------------------
 `[]{}`
