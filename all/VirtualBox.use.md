@@ -42,3 +42,9 @@ Done !
 thomas@thomas-VirtualBox:~$ sudo gpasswd -a thomas vboxsf
 ```
  - By default (when auto-mount is checked) shared folder are mounted on `/media/sf_`
+
+Network
+---
+- Keep the first apadter as it is (`NAT`) it provides an easy access to internet.
+- Add a second adapter `Bridged Adapter` to access special subnetwork IPs
+
