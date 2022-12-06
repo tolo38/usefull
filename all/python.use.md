@@ -38,7 +38,7 @@ Variable
 `help(var) 		#Give us details about variable type, en fonctions`
 
 - **Pretty print** : thanks to [pprint] 
-```
+```py
 import pprint
 stuff = ['spam', 'eggs', 'lumberjack', 'knights', 'ni']
 stuff.insert(0, stuff[:])
