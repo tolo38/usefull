@@ -37,6 +37,15 @@ Variable
 ---
 `help(var) 		#Give us details about variable type, en fonctions`
 
+- **Pretty print** : thanks to [pprint] 
+```
+import pprint
+stuff = ['spam', 'eggs', 'lumberjack', 'knights', 'ni']
+stuff.insert(0, stuff[:])
+pp = pprint.PrettyPrinter(indent=4)
+pp.pprint(stuff)
+```
+
 boolean
 ---
 ```py
@@ -322,6 +331,7 @@ automate browser
 [pep448]: https://peps.python.org/pep-0448/
 [pandas basic]: https://pandas.pydata.org/docs/user_guide/10min.html?highlight=group
 [pandas shift data]: https://towardsdatascience.com/all-the-pandas-shift-you-should-know-for-data-analysis-791c1692b5e
+[pprint]: https://docs.python.org/3/library/pprint.html
 [pyinstaller]: https://pyinstaller.org/en/stable/usage.html
 [selenium]: https://www.selenium.dev/
 [subprocess]: https://docs.python.org/3/library/subprocess.html
