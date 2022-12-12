@@ -87,8 +87,6 @@ git clone $grepo
 `git reflog show` 
 * to revert initial git commit
 `git update-ref -d HEAD`
-* to deal with conflict when rebase or merge
-`git mergetool` usually [vimdiff]
 * pretty print of the graph
 `alias lg='git log --all --decorate --oneline --graph'`
 * modify last commit
@@ -124,6 +122,18 @@ git rebase develop
 git checkout feature
 git rebase master
 ```
+
+### Merge
+
+To deal with conflict when rebase or merge
+* `git mergetool` usually [vimdiff]
+* `git checkout --ours/--theirs [file]` [details][merge_ours_theirs]
+
+
+||git merge master |	git rebase master |
+|-|-|-|
+|Keep changes from master |	--theirs |	--ours |
+|Keep changes from feature	| --ours |	--theirs |
 
 ### log
 display changes made by commit 
@@ -177,5 +187,6 @@ Then add it
 [Cheat-sheet - gitlab]: https://about.gitlab.com/images/press/git-cheat-sheet.pdf
 [Clean Repo]: https://stackoverflow.com/a/42903805
 [LFS]: https://docs.gitlab.com/ee/topics/git/lfs/
+[merge_ours_theirs]: https://howchoo.com/git/git-merge-conflicts-rebase-ours-theirs
 [Split]: https://stackoverflow.com/a/6217314/19624015
 [vimdiff]: https://github.com/tolo38/usefull/blob/master/all/vimdiff.use.md
