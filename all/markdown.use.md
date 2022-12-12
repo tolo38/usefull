@@ -56,6 +56,8 @@ main( ) {
 [title](http://page.com)
 [link]
 [link]: http://targer.io
+[link][id]
+[id]: http://alias-link.com
 ```
 
 #### Quote
