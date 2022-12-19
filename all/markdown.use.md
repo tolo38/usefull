@@ -6,6 +6,13 @@ Markdowm
 
 [Github-Extended]
 
+[Gitlab-Flavoured]
+
+
+[Cheatsheet]: https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet
+[Github-Extended]: https://www.markdownguide.org/extended-syntax/
+[Gitlab-Flavoured]: https://docs.gitlab.com/ee/user/markdown.html
+
 #### Line breaks
 
 Just add two space  
@@ -64,9 +71,8 @@ main( ) {
 >block quote
 ```>block quote```
 
-[Cheatsheet]: https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet
-[Github-Extended]: https://www.markdownguide.org/extended-syntax/
-
+#### Strikeout
+<s>text</s> `<s>text</s>`
 
 #### Arrows
 &#8592; `&#8592;`  
