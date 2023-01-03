@@ -209,7 +209,10 @@ a prvalue (pure rvalue) is
 an xvalue (expiring value) is
 >an expression that has identity and can be moved from.
 
-to set a rvalue where a lvalue is expected use `std::move`
+to set a rvalue where a lvalue is expected use [`std::move` ][std_move]
+- `std::move` is also a way to get ownership of object, like a copy in place and getting ride of the old one.
+
+[std_move]: https://stackoverflow.com/a/27026280/19624015
 
 fonction
 ------
@@ -251,6 +254,23 @@ pointeur
 - `int *var(0)`				initialiser un pointeur avec une address null
 - `var = new int`			alloue la taille d'un int
 - `delete var`				libere la mémoir alloue à var
+
+##### [Smart Pointer][smart_pointer]
+>Advantages
+>
+>`make_unique` teaches users "never say new/delete and new[]/delete[]" without disclaimers.
+>
+>make_unique shares two advantages with `make_shared` (excluding the third advantage, increased efficiency). First, unique_ptr<LongTypeName> up(new LongTypeName(args)) must mention LongTypeName twice, while auto up = make_unique<LongTypeName>(args) mentions it once.
+>
+>make_unique prevents the unspecified-evaluation-order leak triggered by expressions like foo(unique_ptr<X>(new X), unique_ptr<Y>(new Y)). (Following the advice "never say new" is simpler than "never say new, unless you immediately give it to a named unique_ptr".)
+>
+>make_unique is carefully implemented for exception safety and is recommended over directly calling `unique_ptr` constructors.
+>
+>When not to use make_unique
+>
+>Don't use make_unique if you need a custom deleter or are adopting a raw pointer from elsewhere.
+	
+[smart_pointer]: https://stackoverflow.com/a/37514601/19624015
 
 class Objet{}; + Heritage
 ----
