@@ -122,6 +122,18 @@ git rebase develop
 git checkout feature
 git rebase master
 ```
+Possible in a single command `git rebase <remote> <local>`
+```
+git rebase origin/develop feature
+```
+
+* Make a new branch as **backup**, \
+before rebasing, is a good practice. 
+Then to *git push to existing remote branch*
+```
+git push origin local_branch_name:remote_branch_name
+```
+might need `--set-upstream` and/or `-f`
 
 ### Merge
 
