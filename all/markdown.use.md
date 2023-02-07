@@ -68,8 +68,21 @@ main( ) {
 ```
 
 #### Quote
+>**Title** \
 >block quote
 ```>block quote```
+
+#### Collapsible section
+<details><summary>Click to expand</summary>
+*Content*
+</details>
+
+```html
+<details><summary>Click to expand</summary>
+*Content*
+</details>
+```
+
 
 #### Strikeout
 <s>text</s> `<s>text</s>`
