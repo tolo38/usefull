@@ -81,7 +81,30 @@ ame=%s)\n" {} {}
 code --list-extensions | xargs -L 1 echo code --install-extension
 ```
 
+### Regex
 
+```
+# find float -> turn it to double
+([0-9])\.?f
+$1.0
+# clean
+([0-9](\.|e\+|e-)[0-9]+)0*(\.0)?
+([0-9]\.[0-9]+)0*(\.0)?
+([0-9]e\+[0-9]+)0*(\.0)?
+([0-9]e-[0-9]+)0*(\.0)?
+$1
+
+# find number with pending comma -> add one 0 after comma
+([0-9]\.)([^0-9])
+$10$2
+
+# find numbers-> remove trailling 0 
+(\d\.(\d*[1-9]|0))0+
+$1
+# better
+(\d\.(\d*[1-9]|0))0+([^\d])
+$1$3
+```
 
 [vscode keybindings customization]: https://code.visualstudio.com/docs/getstarted/keybindings#_advanced-customization
 [More key bindings]: https://code.visualstudio.com/docs/getstarted/keybindings#_basic-editing
