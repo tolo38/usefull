@@ -81,7 +81,7 @@ ame=%s)\n" {} {}
 code --list-extensions | xargs -L 1 echo code --install-extension
 ```
 
-### Regex
+### [Regex]
 
 ```
 # find float -> turn it to double
@@ -109,3 +109,4 @@ $1$3
 [vscode keybindings customization]: https://code.visualstudio.com/docs/getstarted/keybindings#_advanced-customization
 [More key bindings]: https://code.visualstudio.com/docs/getstarted/keybindings#_basic-editing
 [edite when clause]: https://code.visualstudio.com/api/references/when-clause-contexts
+[Regex]: https://learn.microsoft.com/en-us/visualstudio/ide/using-regular-expressions-in-visual-studio?view=vs-2022
