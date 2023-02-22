@@ -2,6 +2,7 @@
 # Vim
 
 Text Editor
+- [Cheat Sheet](http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html)
 
 Best cmd
 ---
@@ -31,6 +32,7 @@ Basic
 - Début `gg`
 - fin `G`
 - Increase number `Ctrl+A` \ Decrease `Ctrl+X`
+- `gu` / `gU` -> lowercase / UPERCASE 	&emsp;  `~` / `g~` -> Maj / tOGGLE
 
 settings
 ---
