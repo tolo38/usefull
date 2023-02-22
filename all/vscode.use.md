@@ -1,9 +1,12 @@
 
 # Visual Studio Code (VSC) [Text Editor]
 
+<details><summary>
+  
 Hotkeys
 ---
-
+</summary>
+  
 |Keys|Command|Action|Details|
 |-|-|-|-|
 |Alt+Arrow|Left -> "workbench.action.navigateBack"||
@@ -27,6 +30,8 @@ Hotkeys
 |Ctrl+l||Clean output window if focused| when clause : `focusedView == 'workbench.panel.output'` [edite when clause]
 |[More key bindings]
 
+ </details>
+  
 <details><summary> keybindings.json </summary>
 
 ```json
