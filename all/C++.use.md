@@ -96,6 +96,7 @@ variable
 - `int var(value)`				déclaration
 - `++var`					pré-incrémentation(l'expression = var; a la diff de var++ qui vaut = var+1;)
 - `const`					constante
+- `constexpr`					 *stronger concept than constant*, promise to be initialized at compile-time
 
 - **Global** Integral Constant Expression (ICE)
 ```cpp
@@ -219,6 +220,7 @@ fonction
 - `[.h] (int var = default)`			valeur par defaut
 - `(int const& var)`				passage par reference constante : aprote juste de l'information( comme la lecture d'un livre, pas de copie, pas de modif)
 - tableau attention passage par reference automatique
+- Aliases : give an additional name to a function or variable with `static inline constexpr auto new_name = old_name` 
 
 file
 ---
