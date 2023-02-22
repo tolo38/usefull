@@ -27,6 +27,66 @@ Hotkeys
 |Ctrl+l||Clean output window if focused| when clause : `focusedView == 'workbench.panel.output'` [edite when clause]
 |[More key bindings]
 
+<details><summary> keybindings.json </summary>
+
+```json
+// Place your key bindings in this file to override the defaults
+[
+  {
+    "command": "vscode-neovim.compositeEscape1",
+    "key": "j",
+    "when": "neovim.mode == insert && editorTextFocus",
+    "args": "j"
+  },
+  {
+    "command": "vscode-neovim.compositeEscape2",
+    "key": "k",
+    "when": "neovim.mode == insert && editorTextFocus",
+    "args": "k"
+  },
+  {
+    "key": "ctrl+j ctrl+k",
+    "command": "toggleVim"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "workbench.output.action.clearOutput",
+    "when": "focusedView == workbench.panel.output"
+  },
+  {
+    "key": "shift+backspace",
+    "command": "deleteRight",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "delete",
+    "command": "-deleteRight",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "alt+h",
+    "command": "editor.action.moveCarretLeftAction",
+    "when": "editorTextFocus && editorHasSelection"
+  },
+  {
+    "key": "alt+h",
+    "command": "cursorLeft",
+    "when": "editorTextFocus && !editorHasSelection"
+  },
+  {
+    "key": "alt+l",
+    "command": "editor.action.moveCarretRightAction",
+    "when": "editorTextFocus && editorHasSelection"
+  },
+  {
+    "key": "alt+l",
+    "command": "cursorRight",
+    "when": "editorTextFocus && !editorHasSelection"
+  },
+]
+```
+</details>
+
 Extentions
 ---
 ` code --list-extensions`
