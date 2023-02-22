@@ -19,6 +19,9 @@ Just add two space
 at the end 
 of the line
 
+or use `\` \
+to jump to a new line
+
 #### to make a title
 ```
 Markdown (H2)
@@ -85,9 +88,14 @@ main( ) {
 
 
 #### Strikeout
-<s>text</s> `<s>text</s>`
+<s>text</s> `<s>text</s>` \
+~~text~~  `~~text~~`
 
-#### Arrows
+#### Symboles
+
+&emsp;(tabulation) `&emsp;`
+
+##### Arrows
 &#8592; `&#8592;`  
 &#8593; `&#8593;`  
 &#8594; `&#8594;`  
