@@ -15,9 +15,11 @@ Hotkeys
 |Ctrl+Shift+P||See all commands|
 |Ctrl+k Ctrl+k||Key pressed to text|
 |Ctrl+Alt+Arrow||Add cursor|
+|Ctrl+d||add cursor to next matching pattern|
 |Ctrl+/||Comment toggle selected lines|
 |"||Surround selection with quote|
 |Ctrl+Space||Snippets|
+|Ctrl+Shift+\\ |editor.action.jumpToBracket| jump to closing brace|
 |Ctrl+Shift+[||  Fold current region|
 |Ctrl+Shift+]||Unfold current region|
 |Ctrl+K Z|workbench.action.toggleZenMode|Zen Mode
