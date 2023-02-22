@@ -39,9 +39,11 @@ settings
 
 macro
 ---
-hit `q` then one letter `name` to start recording. 
-Then hit `q` again to stop it.
-call macro with `@` `name`.
+- hit `q` then one letter `name` to start recording. 
+- Then hit `q` again to stop it.
+- call macro with `@` `name`.
+- List registered macro with `:reg` (opt: followed with `name`)
+
 
 buffer
 ---
