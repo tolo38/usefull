@@ -87,19 +87,30 @@ sum([1 for x in frequencies if x > 0])		#conditionnal list comprehension
 
 Matrix(nested list)
 ---
+```py
 matrix = [[a, b], [c, d]]		#create a matrix
 [[row[i] for row in matrix] for i in range(4)] #transpose (list comprention)
 list(zip(*matrix))				#do the same
 zip()							#nest (imbrique) structurs
+```
+Transpose (Generique)  :
+```py
+# discards no data if jagged and fills short nested lists with None
+list(map(list, itertools.zip_longest(*l, fillvalue=None)))
+```
 
 tuples
 ---
+```py
 t = ()
+```
 
 Sets
 ---
+```py
 s = {}
 s = set()
+```
 
 Dictionary
 ---
