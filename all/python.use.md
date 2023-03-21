@@ -103,12 +103,19 @@ s = set()
 
 Dictionary
 ---
+```py
 d = {}
 d = {key:value,k2:v2}
 d= dict(k1=v1,k2=v2)
 for k, v in knights.items():	#loop with k and v
 pairs.sort(key=lambda pair: pair[1]) #cool : permet de trier en indiquant la position de la clé
+```
 
+Lambda
+---
+```py
+x = lambda a, b : a * b
+```
 
 Fonction
 ---
