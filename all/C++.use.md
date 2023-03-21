@@ -505,6 +505,24 @@ template<typename T>			indique que la méthode ou la class est générique via l
 template<typename T,typename S>		on peux en avoir plusieurs 
 template <> meth<Obj>			spécification : permet de définir la methode dans le cas ou on applique le template sur un Obj
 ```	
+
+Other Library
+---
+
+#### Eigen
+	
+```C++
+Eigen::MatrixXd mat(3,3);
+mat<<1,2,3,
+     4,5,6,
+     7,8,9;
+Eigen::Index len = mat.rows();
+
+mat.col(0).tail<1>()[0] = 10;
+mat.bottomLeftCorner<1,1>()(0,0) = 10;
+std::cout << mat.col(0).tail<1>().value();
+std::cout << mat.bottomLeftCorner<1,1>().value();	
+```	
 	
 [Conan]: https://kubasejdak.com/introduction-to-conan-package-manager
 [namespace]: https://en.cppreference.com/w/cpp/language/namespace
