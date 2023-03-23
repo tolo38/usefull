@@ -178,6 +178,11 @@ seek(),tell()					#allow to move in the file
 ```
 - `help('FORMATTING')` for more details
 
+Check file extension :
+```py
+string_file_name.endwith(".ext")
+```
+
 Command Line Arguments
 ---
 Command line arguments are in the array `sys.args`
