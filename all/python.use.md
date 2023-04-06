@@ -204,6 +204,7 @@ dump(),load()					#see also
 Parsing(RegExp)
 ---
 `nodes=[re.findall('\d+', n) for n in strArr]   #make a list of numbers from string for each`
+* extract numbers `[int(s) for s in txt.split() if s.isdigit()]`
 
 
 Class
