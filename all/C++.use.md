@@ -141,6 +141,7 @@ int main(int argc, char * argv[]) {
 
 string
 ---
+- `std::string s = "my text char*" + std::string(" can be concatenated using string constructor");` Concatenate
 - `sprintf(Buffer,"Hello World");`		print formated string to a buffer 
 - `Buffer + strlen(Buffer)`			to append at the end of current buffer (or at any index)
 - `std::to_string(_int)`			to turn a `int` into a string
