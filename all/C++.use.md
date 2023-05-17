@@ -467,7 +467,7 @@ A callback is a function that takes a *callable*(listed below) as parameter and 
     -`std::function` objects
     -Lambda expressions
     -Bind expressions
-    -Function objects (classes with overloaded function call operator operator())
+    -Functor : Function objects (classes with overloaded function call operator operator())
 
 >\* Note: Pointer to data members are callable as well but no function is called at all.
 
