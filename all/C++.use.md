@@ -294,6 +294,7 @@ static void meth();			déclaration d'une methode statique
 
 surcharge d'operateur
 ----------
+```c++
 bool operator==(Obj const& a, Obj const& b); opérateur binaire: Situer en dehors de la classe ou comme ami
 friend bool op();			dans la class Obj : déclare une méthode "op" ami de "Obj"
 return !(a==b);				Implément : operator!=()
@@ -303,9 +304,11 @@ Obj& operator=(Obj const& aCopie)	vas de paire avec le constructeur par copie (s
 iostream& operator<<(ostream& flux,Obj const& o) operateur de flux : prend est retourne une ref pour pemettre les chaines(cout << o1 << 02);
 int operator()()			foncteur : redefinition l'operateur parenthé permet d'utilisé l'objet comme une fonction
 prédicat				foncteur retournant un bool et prenant un seul parametre.
-
+```
+	
 polymorphisme
---
+---
+```c++	
 virtual void meth();			déclare une méthode virtuel.
 permet d'appeler la methode corespondant a la classe de notre objet
 fonctionne par résolution dynamique de lien. 
@@ -313,12 +316,15 @@ dois etre utilisé sur un pointeur ou une reference.
 Impossible de l'utiliser pour les constructeurs
 Obligatoirement utiliser pour les destructeurs
 Probleme des collections hétérogènes (construit par copie ?) :
-
+```
+	
 class abstrait
---
+---
+```
 au moins une methode virtuel pure
 virtual void meth()=0;			methode virtuel pure
-
+```
+	
 Standar Lib (il y en a 15 qui vienne du C)
 ---------
 |Lib|Details|
@@ -470,6 +476,9 @@ A callback is a function that takes a *callable*(listed below) as parameter and 
     -Functor : Function objects (classes with overloaded function call operator operator())
 
 >\* Note: Pointer to data members are callable as well but no function is called at all.
+	
+There is some name for common callbacks:
+	- Predicate : do not modify data and return a boolean
 
 [more details](https://stackoverflow.com/questions/2298242/callback-functions-in-c)
 
