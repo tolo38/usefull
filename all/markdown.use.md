@@ -75,6 +75,13 @@ main( ) {
 >block quote
 ```>block quote```
 
+#### Comment
+[//]: # (This may be the most platform independent comment)
+```md
+[//]: # (This may be the most platform independent comment)
+```
+
+
 #### Collapsible section
 <details><summary>Click to expand</summary>
 *Content*
