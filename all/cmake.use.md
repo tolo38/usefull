@@ -1,6 +1,12 @@
 
 
-# Use in Vscode with extention cmake
+link libraries 
+---
+
+Need to learn
+
+Use in Vscode with extention cmake
+---
 
 can convert `*.sln` project from MSVC to cmake via `cmake-convert` [git-repos][cmake-converter]
 
@@ -13,7 +19,8 @@ set(CMAKE_MFC_FLAG 2)
 [Settings][vscode-settings]
 
 
-# Degug
+Degug
+---
 
 Printing cmake variable can help a lot in debuging process
 ```
