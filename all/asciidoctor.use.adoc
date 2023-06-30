@@ -8,10 +8,34 @@
 
 .How to display code
 [source,asciidoctor]
-----
+```
 .Block title
 [source,asciidoctor]
- ----
-// to use this exemple remove spaces before " ----" and add your code here
- ----
 ----
+// Add your code here
+----
+```
+
+
+=== Convert Markdown to Asciidoc
+
+* links
+* list
+* quote
+* tab
+* horizontal line
+
+.Note
+* *Empty Line*: A list(quote) item’s first line of text must be offset from the marker (*) by at least one space. Empty lines are required before and after a list. Additionally, empty lines are permitted, but not required, between list items.
+* *Space*: need a space after `>`/`*` and before entry
+* ``[options="header"]
+|===``md table``|===``
+* *xreflabel*: `[xref](#section)` -> ``\<<section,xref>>``
+
+
+=== Cross referance
+
+"anchor" are automatically genereated for each title in adoc(opposit to md)
+it can be reached via `<<` anchor name `>>`
+
+other .use pages are accessible with relative path within the same git repo ( ex : `\link:./markdown.use.md[markdown]` link:./markdown.use.md[markdown] )
