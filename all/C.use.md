@@ -145,6 +145,40 @@ int g(void)
 // calling f() now won't work
 ```
 
+Macro
+---
+
+* add trace : How do I show the value of a #define at compile-time?
+```C
+#define XSTR(x) STR(x)
+#define STR(x) #x
+```
+The value of a macro can then be displayed with:
+```C
+#pragma message "The value of ABC: " XSTR(ABC)
+```
+
+* Or use some Remeinder :
+```C
+// Statements like:
+ // #pragma message(Reminder "Fix this problem!")
+ // Which will cause messages like:
+ // C:\Source\Project\main.cpp(47): Reminder: Fix this problem!
+ // to show up during compiles. Note that you can NOT use the
+ // words "error" or "warning" in your reminders, since it will
+ // make the IDE think it should abort execution. You can double
+ // click on these messages and jump to the line in question.
+
+ #define Stringize( L )     #L 
+ #define MakeString( M, L ) M(L)
+ #define $Line MakeString( Stringize, __LINE__ )
+ #define Reminder __FILE__ "(" $Line ") : Reminder: "
+
+//Once defined, use like so:
+
+#pragma message(Reminder "Fix this problem!") 
+```
+
 Hardware
 ---
 
