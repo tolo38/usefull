@@ -241,6 +241,14 @@ ToUnderstand
 
 ---
 
+Threading
+---
+```
+threading.Timer(0.01, print("wait for 1ms delay")).start()
+```
+
+
+
 Plot
 ---
 ```py
