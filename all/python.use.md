@@ -243,7 +243,7 @@ ToUnderstand
 
 Threading
 ---
-```
+```py
 threading.Timer(0.01, print("wait for 1ms delay")).start()
 ```
 
@@ -359,6 +359,32 @@ while True:             # Event Loop
     if event in (None, 'Exit'):
         break
 window.close()
+```
+
+tkinter
+---
+```py
+# importing tkinter for gui
+import tkinter as tk
+
+def flash(color='#00aaaa'):
+    # creating window
+    window = tk.Tk()
+
+    # setting attribute
+    window.attributes('-fullscreen', True)
+    window.attributes('-topmost', True)
+    window.configure(bg=color)
+
+    # Create transparent window
+    window.attributes('-alpha',0.5)
+
+    window.title("Flash")
+
+    # timer thread function call here in 1s to close the window
+    window.after(1000,window.destroy)
+
+    window.mainloop()
 ```
 
 [PyInstaller]
