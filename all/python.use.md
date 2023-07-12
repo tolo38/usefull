@@ -3,7 +3,7 @@
 interpretor
 ---
 
-````sh
+```sh
 python -c "import tkinter as tk; tk.Tk().mainloop()"
 ```
 
@@ -258,11 +258,11 @@ python -m pip install pipx
 pipx install poetry
 ```
 check
-````sh
+```sh
 poetry --version
 ```
 if necessary update path
-````sh
+```sh
 $env:PATH += "C:\Users\<>\.local\bin\"
 ```
 
@@ -371,7 +371,14 @@ chmod 755 app
 
 ### [Library](https://realpython.com/python-zip-import/)
 
-````py
+* create de zip lib
+```sh
+zip lib.py
+```
+
+* use it
+
+```py
 import site
 
 print(site.getusersitepackages())
@@ -391,6 +398,12 @@ import lib
 lib.Hi()
 ```
 
+* (add it to the path)
+
+create a file `lib-name.pth` in folder part of `site` :
+in windows (with python 3.10) `C:\Users\<>user\AppData\Roaming\Python\Python310\site-packages\lib-name.pth`.
+
+It contains the path to the lib.zip
 
 Threading
 ---
