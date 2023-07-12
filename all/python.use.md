@@ -2,6 +2,12 @@
 
 interpretor
 ---
+
+````sh
+python -c "import tkinter as tk; tk.Tk().mainloop()"
+```
+
+
 ```py
 python [-i src.py]				#mode interactif 
 _						#resultat precedent
@@ -244,14 +250,61 @@ ToUnderstand
 Package
 ---
 
-To create package once can use [poetry](https://python-poetry.org/docs/basic-usage/) :
+### Poetry
+
+* install :
+```sh
+python -m pip install pipx
+pipx install poetry
+```
+check
+````sh
+poetry --version
+```
+if necessary update path
+````sh
+$env:PATH += "C:\Users\<>\.local\bin\"
+```
+
+
+
+* To create package once can use [poetry](https://python-poetry.org/docs/basic-usage/) :
 
 ```sh
-poetry new <project-name>
+poetry init .
 ```
 it auto generate the initial project architecture and `.toml` file meant to configure project metadata
 
-* Plus : with [Dynamic versioning plugin for Poetry](https://github.com/mtkennerly/poetry-dynamic-versioning)
+* set up
+
+```sh
+poetry install
+```
+
+* build the package
+
+```sh
+poetry build -f wheel
+```
+
+* (more)
+```sh
+poetry env
+poetry env remove
+poetry env list
+poetry add --group dev black
+poetry add --group dev ipykernel==5.5.6
+```
+
+* publish
+
+```sh
+poetry run python -m pip install twine
+poetry run twine upload --repository-url https://git.com/api/v4/projects/1004/packages/pypi -u gitlab+deploy-token-# -p pass*** .\dist\*
+
+```
+
+* More : with [Dynamic versioning plugin for Poetry](https://github.com/mtkennerly/poetry-dynamic-versioning)
 it can be directly installed in the `gitlab-ci.yml` with the line 
 
 ```yml
@@ -316,10 +369,27 @@ rm app.zip
 chmod 755 app
 ```
 
+### [Library](https://realpython.com/python-zip-import/)
 
+````py
+import site
 
+print(site.getusersitepackages())
 
-### Library
+import sys
+
+# print(sys.path)
+print('\n'.join(x for x in sys.path if x))
+
+import lib
+
+# if import lib faild (concidering lib.zip being in the current folder)
+sys.path.insert(0, "./lib.zip")
+
+import lib
+
+lib.Hi()
+```
 
 
 Threading
