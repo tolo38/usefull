@@ -273,6 +273,55 @@ other option :
 * [Python build](https://pypa-build.readthedocs.io/en/stable/index.html)
 
 
+Deploy Zip
+---
+
+### [Application](https://gist.github.com/asimjalis/4237534)
+
+```sh
+python -m zipapp project -p "/usr/bin/env python"
+```
+
+or 
+```sh
+#! /bin/bash
+
+
+<<**-**
+
+Create a file __main__.py containing:
+
+print "Hello world from Python"
+Zip up the Python files (in this case just this one file) into app.zip by typing:
+
+zip app.zip *
+The next step adds a shebang to the zip file and saves it as app—at this point the file app is a zip file containing all your Python sources.
+
+echo '#!/usr/bin/env python' | cat - app.zip > app
+chmod 755 app
+That’s it. The file app is now have a zipped Python application that is ready to deploy as a single file.
+
+You can run app either using a Python interpreter as:
+
+python app
+Or you can run it directly from the command line:
+
+./app
+
+**-**
+
+zip app.zip __main__.py
+echo '#!/usr/bin/env python' | cat - app.zip > app
+rm app.zip
+chmod 755 app
+```
+
+
+
+
+### Library
+
+
 Threading
 ---
 ```py
