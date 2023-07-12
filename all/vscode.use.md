@@ -184,6 +184,18 @@ $1
 $1$3
 ```
 
+### Terminal
+
+#### History
+
+VSCode terminal use external shell. For linux the default shell is bash, `For window, the default shell for window is powershell.
+Find the history at the following path (replacing <john> bye User-name :
+```
+C:\Users\<john>\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline
+```
+[powershell-history](https://0xdf.gitlab.io/2018/11/08/powershell-history-file.html)
+
+
 [vscode keybindings customization]: https://code.visualstudio.com/docs/getstarted/keybindings#_advanced-customization
 [More key bindings]: https://code.visualstudio.com/docs/getstarted/keybindings#_basic-editing
 [edite when clause]: https://code.visualstudio.com/api/references/when-clause-contexts
