@@ -241,6 +241,38 @@ ToUnderstand
 
 ---
 
+Package
+---
+
+To create package once can use [poetry](https://python-poetry.org/docs/basic-usage/) :
+
+```sh
+poetry new <project-name>
+```
+it auto generate the initial project architecture and `.toml` file meant to configure project metadata
+
+* Plus : with [Dynamic versioning plugin for Poetry](https://github.com/mtkennerly/poetry-dynamic-versioning)
+it can be directly installed in the `gitlab-ci.yml` with the line 
+
+```yml
+default:
+  tags:
+    - WINDOWS
+  before_script:
+    - py -3 -m venv .venv
+    - .\.venv\Scripts\activate
+    - python -m pip install --upgrade pip
+    - python -m pip install poetry==1.5.1
+    - poetry --version
+    - poetry self add "poetry-dynamic-versioning[plugin]"
+    - poetry install
+```
+
+other option :
+* [Python project](https://packaging.python.org/en/latest/tutorials/packaging-projects/)
+* [Python build](https://pypa-build.readthedocs.io/en/stable/index.html)
+
+
 Threading
 ---
 ```py
