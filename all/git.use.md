@@ -90,7 +90,7 @@ git clone $grepo
 * pretty print of the graph
 `alias lg='git log --all --decorate --oneline --graph'`
 * modify last commit
-`git commit --amend` (need `add`before) if already pushed add force option `git push --force`
+`git commit --amend` (need `add`before) if already pushed add force option `git push --force` or `--force-with-lease`
 * to modify previous commit [split]
 `git commit rebase -i` use `HEAD~#` 
   * then squash
