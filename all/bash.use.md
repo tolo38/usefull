@@ -80,7 +80,9 @@ mkdir -p "$d" && cp file "$d"        #copy and create destination dir if it does
 `[ -d "/path/to/dir" ] && echo "Directory /path/to/dir exists."`
 
 - change extention :
-`for f in *.OLDNAME; do mv $f `basename $f .OLDNAME`.NEWNAME; done;`
+```sh
+for f in *.OLDNAME; do mv $f `basename $f .OLDNAME`.NEWNAME; done;
+```
 
 - ask for confirmation :
 ```
@@ -113,6 +115,12 @@ function add_less_at_the_end(){
 }
 bind -x '"\C-T": add_less_at_the_end'
 ```
+
+- Compare binaries
+```sh
+diff <(xxd /c/tmp/bin/ProcessControl.dll) <(xxd ProcessControl.dll) | grep ">" | wc -l
+```
+
 
 System Information
 ---
