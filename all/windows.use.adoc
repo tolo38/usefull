@@ -7,3 +7,10 @@
 ```
 %COMSPEC% /C .\prog.exe -args
 ```
+
+=== Folder in use
+
+* Process Explorer
+** `Find`/`Find Handle or Dll` past file path
+* PowerToys
+** right click file / `What's using this file?` it open File Locksmith
