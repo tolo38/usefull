@@ -250,6 +250,24 @@ ToUnderstand
 Package
 ---
 
+### Virtual environement (venv)
+
+important to isolate each python projects
+and limit dependencies update conflict
+(update that would break older project)
+
+```sh
+python -m venv venv
+venv\Scripts\activate
+deactivate
+```
+```sh
+python -m pip install ...
+python -m pip freeze > requirements.txt
+python -m pip install -r requirements.txt
+```
+Note : `python -m ...` ensure that we call the right version(from the activated venv) of pip,venv,...
+
 ### Poetry
 
 * install :
@@ -323,7 +341,10 @@ default:
 
 other option :
 * [Python project](https://packaging.python.org/en/latest/tutorials/packaging-projects/)
-* [Python build](https://pypa-build.readthedocs.io/en/stable/index.html)
+/ [Python build](https://pypa-build.readthedocs.io/en/stable/index.html)
+`python -m build`
+* [setup.py](https://medium.com/analytics-vidhya/how-to-create-a-python-library-7d5aea80cc3f)
+`python setup.py bdist_wheel`
 
 
 Deploy Zip
