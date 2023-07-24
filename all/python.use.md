@@ -482,6 +482,11 @@ autoit.control_click("[Class:#32770]", "Button2")
 ```
 PySimpleGUI
 ---
+Install :
+```sh
+python -m pip install pysimplegui
+```
+
 ```py
 import PySimpleGUI as sg
 sg.theme('Dark Blue 3')
