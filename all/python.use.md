@@ -263,8 +263,8 @@ venv\Scripts\activate
 deactivate
 ```
 ```sh
-python -m pip install ...
-python -m pip freeze > requirements.txt
+python -m pip freeze > requirements.txt # deprecated use pipreqs
+pipreqs ./path # instead of freeze
 python -m pip install -r requirements.txt
 ```
 Note : `python -m ...` ensure that we call the right version(from the activated venv) of pip,venv,...
