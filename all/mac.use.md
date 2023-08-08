@@ -10,8 +10,16 @@ two finger slid			#scroll
 <ctrl>+<arrow>			#move betwin full screen
 <ctrl>+<shift>+<off>		#sleep
 <ctrl>+<cmd>+F			#full screen
-<opt>+<cmd>+8      #Magnifier zoom
 ```
+
+#### Magnifier zoom 
+Once activated :
+```
+<opt>+<cmd>+8        
+```
+To activate :
+* System Preferences > Accessibility > Zoom > Use keyboard shortcuts to zoom
+
 
 text
 ---
