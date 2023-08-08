@@ -25,3 +25,4 @@ NEW ARRAY (4 columns)
 |-|VS|Collapse solution explorer|[link](https://stackoverflow.com/a/24514803)|
 |Ctrl+K ctrl+X||Insert a snipet|
 |Ctrl+K ctrl+F||Auto format selection|
+|Alt+Shift+Enter||Make Visual Studio full screen|[Zen Mode](https://bigfont.ca/go-kinda-zen-mode-with-visual-studio/)
