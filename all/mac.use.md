@@ -10,6 +10,7 @@ two finger slid			#scroll
 <ctrl>+<arrow>			#move betwin full screen
 <ctrl>+<shift>+<off>		#sleep
 <ctrl>+<cmd>+F			#full screen
+<opt>+<cmd>+8      #Magnifier zoom
 ```
 
 text
