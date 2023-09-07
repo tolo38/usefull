@@ -1,4 +1,5 @@
-# Batch
+= link:https://www.tutorialspoint.com/batch_script/batch_script_quick_guide.htm[Batch]
+
 ifdef::env-github[]
 :tip-caption: :bulb:
 :note-caption: :information_source:
@@ -72,4 +73,5 @@ exit /b
 The code above relies on an external command : `FTDI-utility.exe`
 It is calling it in a loop alternatively to write value and read register
 
-* `findstr` is processing string as a kind of `grep`
+* https://ss64.com/nt/findstr.html[`findstr`] is processing string as a kind of a poor `grep`
+* https://ss64.com/nt/set.html[`set`]
