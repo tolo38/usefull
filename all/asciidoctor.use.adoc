@@ -39,3 +39,8 @@
 it can be reached via `<<` anchor name `>>`
 
 other .use pages are accessible with relative path within the same git repo ( ex : `\link:./markdown.use.md[markdown]` link:./markdown.use.md[markdown] )
+
+
+=== Icons
+
+find https://gist.github.com/rxaviers/7360908[here] the list of emoji :saxophone:
