@@ -1,0 +1,23 @@
+# Batch
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: CAUTION:fire:
+:warning-caption: :warning:
+endif::[]
+
+script language used in `.bat` files these are windows automations.
+
+[CAUTION]
+.Discouraged use
+====
+Honestly use it only if there is no any other alternative (and you are forced to)
+Evrything with this script language is laborious and prone to error.
+list of potential alternatives :
+
+* powershell (generally already install on windows)
+* bash ( if you have access to WSL or install git bash)
+* python (if you cannot install it, use embeded version)
+====
+
