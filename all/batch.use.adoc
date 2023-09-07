@@ -21,3 +21,55 @@ list of potential alternatives :
 * python (if you cannot install it, use embeded version)
 ====
 
+.Code example
+[source,bat]
+----
+echo off
+setlocal enabledelayedexpansion
+set LF=^
+
+
+@REM Two empty line above are necessary, !LF! is \n
+@REM this is a comment
+:: this is an other comment
+
+for /l %%n in (0,1,59) do ( 
+    ::use "set /a" to compute numeric value
+    SET /A phase = %%n * 6
+    :: use ! instead of % to be evaluated at execution and not at parsing (req: setlocal enabledelayedexpansion)
+    echo Phase : !phase! degree
+    .\..\x64\Release\FTDI-Utility.exe 64 0 !phase! | findstr "\.\.\." 
+    call :read
+    :: Print a line return
+    echo:
+    echo:
+)
+pause
+exit /b
+
+:: Labels works as funtion definitions
+:read
+set "RES="
+@REM FOR /F "delims=" %%i IN (' .\..\x64\Release\FTDI-Utility.exe read') DO set "RES=!RES! !LF! %%i"
+FOR /F "delims=" %%i IN (' .\..\x64\Release\FTDI-Utility.exe read') DO set "RES=!RES! - %%i"
+@REM set DISP=!RES:-=LF!
+@REM echo !DISP! | findstr "="
+echo !RES!
+
+@REM (if !RES:0.00=!==!RES! echo "should read again")
+@REM 0000000000
+@REM 0xffffffff
+echo !RES! | find "0000000000" 1>nul
+if not errorlevel 1 (
+    if not !phase!==0 (
+        echo Reading again
+        goto read
+    )
+)
+exit /b
+----
+
+The code above relies on an external command : `FTDI-utility.exe`
+It is calling it in a loop alternatively to write value and read register
+
+* `findstr` is processing string as a kind of `grep`
