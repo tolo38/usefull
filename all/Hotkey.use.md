@@ -17,6 +17,7 @@ NEW ARRAY (4 columns)
 
 # Visual Studio (MSVC) [IDE]
 
+[GUI jump to definition](https://learn.microsoft.com/en-us/visualstudio/get-started/csharp/tutorial-wpf?view=vs-2022#view-a-representation-of-the-ui-elements)
 
 |Keys|Programme|Action|Details|
 |-|-|-|-|
