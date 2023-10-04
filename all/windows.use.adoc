@@ -14,3 +14,11 @@
 ** `Find`/`Find Handle or Dll` past file path
 * PowerToys
 ** right click file / `What's using this file?` it open File Locksmith
+
+
+=== User Interface
+
+**Task View** image:https://cdn.iconscout.com/icon/free/png-256/free-task-view-1174826.png[Task View,20,20]
+
+- Open virtual desktop: <Windows Key + Tab>
+- Switch virtual desktop: <Windows Key + Ctrl + arrow>
