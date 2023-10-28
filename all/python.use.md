@@ -43,6 +43,19 @@ Variable
 ---
 `help(var) 		#Give us details about variable type, en fonctions`
 
+- To check the existence of a variable:
+```py
+if 'myVar' in locals():
+```
+```py
+if 'myVar' in globals():
+```
+- To check if an object has an attribute:
+```py
+if hasattr(obj, 'attr_name'):
+  # obj.attr_name exists.
+```
+
 - **Pretty print** : thanks to [pprint] 
 ```py
 import pprint
