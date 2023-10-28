@@ -221,7 +221,27 @@ fonction
 - `[.h] (int var = default)`			valeur par defaut
 - `(int const& var)`				passage par reference constante : aprote juste de l'information( comme la lecture d'un livre, pas de copie, pas de modif)
 - tableau attention passage par reference automatique
-- Aliases : give an additional name to a function or variable with `static inline constexpr auto new_name = old_name` 
+- Aliases : give an additional name to a function or variable with `static inline constexpr auto new_name = old_name`
+
+#### Structured binding in C++17
+
+return multiple values from a function using a local structure or tuple
+
+```cpp
+#include <iostream>
+#include <tuple>
+
+auto foo()
+{
+  return {128, 3.142, "Hello"};
+}
+
+int main()
+{
+  auto [value1, value2, value3] = foo();
+  cout << value1 << ", " << value2 << ", " << value3 << endl;
+}
+```
 
 file
 ---
