@@ -179,6 +179,8 @@ The value of a macro can then be displayed with:
 #pragma message(Reminder "Fix this problem!") 
 ```
 
+- Variadic macro `__VA_ARGS__` in the macro replacement list is replaced by the passed arguments. **Note** : Both the C99 and C++11 standards require at least one argument, but since C++20 this limitation has been lifted through the `__VA_OPT__` functional macro.
+
 Hardware
 ---
 
