@@ -22,3 +22,8 @@
 
 - Open virtual desktop: <Windows Key + Tab>
 - Switch virtual desktop: <Windows Key + Ctrl + arrow>
+
+
+=== Setup
+
+- link:https://youtu.be/VwHBa1P7a9c?t=222[ssh installation]
