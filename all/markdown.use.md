@@ -122,3 +122,27 @@ more [Arrows]
 :upside_down_face:	:wink:	:blush: :innocent:
 
 [Emoji]: https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md
+
+
+#### CSS stryle
+
+Following codes works localy but not on gitlab or github
+
+```markdown
+    <style>
+    .language-html:before {
+        content: "\1F4C1";
+    }
+    .language-py:before {
+        content: "\00BB";
+    }
+    </style>
+    ```html
+    test
+    ```
+    ```py
+    test
+    ```
+```
+
+
