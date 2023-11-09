@@ -156,12 +156,13 @@ display graph
 ### Patch
 
 You can just use git diff to produce a unified diff suitable for git apply:
-
+```sh
 git diff tag1..tag2 > mypatch.patch
+```
 You can then apply the resulting patch with:
-
+```sh
 git apply mypatch.patch
-
+```
 
 ### LFS (Large file system)
 Store Big Files (Binary, picture, ...) in your repo use [LFS]
