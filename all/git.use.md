@@ -153,6 +153,16 @@ display changes made by commit
 display graph
 `git log --all --decorate --oneline --graph`
 
+### Patch
+
+You can just use git diff to produce a unified diff suitable for git apply:
+
+git diff tag1..tag2 > mypatch.patch
+You can then apply the resulting patch with:
+
+git apply mypatch.patch
+
+
 ### LFS (Large file system)
 Store Big Files (Binary, picture, ...) in your repo use [LFS]
 * start using lfs 
