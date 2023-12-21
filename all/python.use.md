@@ -203,6 +203,20 @@ Check file extension :
 string_file_name.endwith(".ext")
 ```
 
+Logging and Error managment
+---
+With the following code you allways find your out put text: it is waitting for you in `/tmp`
+```py
+try:
+    #code here
+except Exception as error:
+    # handle the exception
+    f = open("C:/tmp/TLO.log", "a") 
+    f.write("An exception occurred: "+str(error))
+    f.close()
+```
+:warning: Juste remeber to create that folder if it does not exist yet. :warning:
+
 Command Line Arguments
 ---
 Command line arguments are in the array `sys.args`
