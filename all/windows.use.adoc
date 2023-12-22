@@ -8,12 +8,21 @@
 %COMSPEC% /C .\prog.exe -args
 ```
 
-=== Folder in use
+Find user relative data (or software) associated to its login over network `%AppData%`
 
+
+=== Folder in use
+How to get Write/del/mv right onto file ...
+`the action can't be completed because the folder or a file in it is open in another program`
+
+* Resource monitor image:https://winaero.com/blog/wp-content/uploads/2017/07/performance-monitor-perfmon-icon.png[logo,20,20]
+** tab: CPU
+** -> Associated Handles : past the file name
 * Process Explorer
 ** `Find`/`Find Handle or Dll` past file path
 * PowerToys
 ** right click file / `What's using this file?` it open File Locksmith
+
 
 
 === User Interface
