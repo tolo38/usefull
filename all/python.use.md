@@ -275,6 +275,19 @@ ToUnderstand
 
 ---
 
+Pychache
+---
+
+Running python generate caching files in `__pychache__` folder to optimise exectision time.
+
+:warning: For development : it ia possible that those did not get updated dispate some source modification
+
+* one option to avoid it :
+```sh
+python -B
+```
+
+
 Package
 ---
 
