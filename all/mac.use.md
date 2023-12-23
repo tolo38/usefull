@@ -2,6 +2,7 @@
 General
 ---
 ```
+<F4>                            # Open lauchpad, app menu
 two finger tap			#right click
 two finger slid			#scroll
 <cmd>+w				#close the window
