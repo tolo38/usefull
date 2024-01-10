@@ -576,6 +576,7 @@ std::cout << mat.bottomLeftCorner<1,1>().value();
 - `TEST()` is useful when you want to write unit tests for static or global functions or simple classes. [Example](https://github.com/google/googletest/blob/565f1b848215b77c3732bca345fe76a0431d8b34/googletest/test/googletest-port-test.cc#L54)
 - `TEST_F()` is useful when you need access to objects and subroutines in the unit test. [Example](https://github.com/google/googletest/blob/e8a82dc7ede61c4af3b9d75aa0e953b8cecfc8bb/googletest/test/gtest_unittest.cc#L102)
 - `TEST_P()` is useful when you want to write tests with a parameter. Instead of writing multiple tests with different values of the parameter, you can write one test using TEST_P() which uses GetParam() and can be instantiated using INSTANTIATE_TEST_SUITE_P(). [Example](https://github.com/google/googletest/blob/eafd2a91bb0c4fd626aae63ae852812fbd4999f2/googletest/test/googletest-param-test-test.cc#L679)
+    - read more about [parametrised test](https://www.sandordargo.com/blog/2019/04/24/parameterized-testing-with-gtest)
 
 - Personnalyse out put can be obtain with stream :
 ```cpp
