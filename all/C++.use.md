@@ -202,6 +202,8 @@ an lvalue is
 So, there's no such thing as an lvalue object, but there is an object which is locally named (or referred to) by an lvalue expression
 
 an rvalue is
+> the simple explanation is that it doesn't have a memory address. E.g. the number 6, and character 'v' are both r-values.
+
 >an expression that is either a prvalue or an xvalue. It can be moved from. It may or may not have identity.
 use `&&` to force function argument to be lvalue
 
