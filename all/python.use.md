@@ -251,6 +251,12 @@ def __init__(self):				#constructor
 E = type('',(object,),{})()			#lambda object anonymous class
 ```
 
+- function is a object so it is easy to add it fields attribute :
+```py
+def a():
+	a.wasCalled=True
+```
+
 Note
 ---
 
