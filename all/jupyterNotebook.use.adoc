@@ -1,0 +1,5 @@
+
+# Jupyter Notebook
+
+- https://github.com/ipython-contrib/jupyter_contrib_nbextensions/tree/master/src/jupyter_contrib_nbextensions/nbextensions/python-markdown
+- https://jupyterbook.org/en/stable/interactive/hiding.html
