@@ -599,6 +599,8 @@ while True:             # Event Loop
         break
 window.close()
 ```
+- [multiline text colored]https://github.com/PySimpleGUI/PySimpleGUI/issues/2547)
+
 
 tkinter
 ---
