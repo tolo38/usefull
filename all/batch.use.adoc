@@ -76,3 +76,4 @@ It is calling it in a loop alternatively to write value and read register
 * https://ss64.com/nt/findstr.html[`findstr`] is processing string as a kind of a poor `grep`
 * https://ss64.com/nt/set.html[`set`]
 * https://devblogs.microsoft.com/oldnewthing/20120731-00/?p=7003[`for /f "delims=" %%i in (names.txt) do echo [%%i\]`]
+* introspection ( file location ) : `cd /d %~dp0`
