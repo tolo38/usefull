@@ -521,8 +521,10 @@ autoit.control_send("[CLASS:Notepad]", "Edit1", "reminder{!}")
 autoit.win_close("[CLASS:Notepad]")
 autoit.control_click("[Class:#32770]", "Button2")
 ```
-PySimpleGUI
+[PySimpleGUI]
 ---
+- [PySimpleGUI-more]
+
 Install :
 ```sh
 python -m pip install pysimplegui
@@ -645,5 +647,7 @@ automate browser
 [pandas shift data]: https://towardsdatascience.com/all-the-pandas-shift-you-should-know-for-data-analysis-791c1692b5e
 [pprint]: https://docs.python.org/3/library/pprint.html
 [pyinstaller]: https://pyinstaller.org/en/stable/usage.html
+[pysimplegui]: https://www.pysimplegui.org/en/latest/#pattern-2-b-persistent-window-multiple-reads-using-an-event-loop-updates-data-in-window
+[pysimplegui-more]: https://www.tutorialspoint.com/pysimplegui/pysimplegui_checkbox_element.htm
 [selenium]: https://www.selenium.dev/
 [subprocess]: https://docs.python.org/3/library/subprocess.html
