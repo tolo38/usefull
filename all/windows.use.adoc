@@ -36,3 +36,9 @@ How to get Write/del/mv right onto file ...
 === Setup
 
 - link:https://youtu.be/VwHBa1P7a9c?t=222[ssh installation]
+
+
+=== More
+
+- link:https://www.howtogeek.com/118594/how-to-edit-your-system-path-for-easy-command-line-access/[sys PATH]
+- link:https://www.sharepointdiary.com/2021/08/run-batch-file-from-powershell.html#:~:text=Creating%20a%20batch%20file%20to%20run%20a%20PowerShell%20script,-Creating%20a%20batch&text=To%20call%20the%20PowerShell%20script,path%20to%20your%20PowerShell%20script.[batch file run from powershell]
