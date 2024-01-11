@@ -411,6 +411,7 @@ int main () {
       throw ooops();
   } catch (std::exception& ex) {
       std::cout << ex.what();
+      throw; // to rethrow DO NOT throw ex; here	
   }
   return 0;
 }
