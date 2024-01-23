@@ -33,6 +33,10 @@ How to get Write/del/mv right onto file ...
 - Switch virtual desktop: <Windows Key + Ctrl + arrow>
 
 
+=== Screen recorder
+
+use Xbox Game Bar with shortcut `WIN`+`ALT`+`R`
+
 === Setup
 
 - link:https://youtu.be/VwHBa1P7a9c?t=222[ssh installation]
