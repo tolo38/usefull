@@ -452,9 +452,12 @@ import site
 print(site.getusersitepackages())
 
 import sys
-
-# print(sys.path)
 print('\n'.join(x for x in sys.path if x))
+
+# introspect, current dyrectory script version
+print(sys.path) #[0]
+print(sys.executable)
+print(os.getcwd())
 
 import lib
 
