@@ -2,6 +2,13 @@
 = Windows
 
 
+=== Open a file path
+
+Use double slash
+```c++
+"C:\\tmp\\test.txt"
+```
+
 === Relative Link
 
 ```
