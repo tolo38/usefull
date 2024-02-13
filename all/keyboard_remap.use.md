@@ -1,5 +1,9 @@
 
+# Use US international keyboard instead 
 
+I you can't [find some character](https://slcr.wsu.edu/help-pages/microsoft-keyboards-us-international/)
+
+# ReMap
 
 Remape keyboard at hardware level
 -   pro :
