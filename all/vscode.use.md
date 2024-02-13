@@ -22,7 +22,7 @@ Hotkeys
 |Ctrl+Shift+\\ |editor.action.jumpToBracket| jump to closing brace|
 |Ctrl+Shift+[||  Fold current region|
 |Ctrl+Shift+]||Unfold current region|
-|Ctrl+K Z|workbench.action.toggleZenMode|Zen Mode
+|Ctrl+K Z|workbench.action.toggleZenMode|Zen Mode|to fix conflict with VIM `"vim.handleKeys": {"<C-k>": false},`
 ||
 ||workbench.action.openGlobalKeybindings|See all commands and shortcut bindings (in settings)|[vscode keybindings customization]
 ||workbench.action.openDefaultKeybindingsFile|See all commands and shortcut bindings (in JSON file)|
