@@ -38,6 +38,23 @@ reference
 [Core
 guidelines](http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#a-namerc-orgac1-organize-related-data-into-structures-structs-or-classes)
 
+
+Trace and open file
+---
+
+```C++
+    // Open a file for writing wide characters
+    std::wofstream outputFile("C:\\tmp\\Debug.txt", std::ios_base::app);
+    time_t now = time(0);
+    tm *ltm = localtime(&now);
+    outputFile <<   "Call Time: "<< ltm->tm_hour << ":" << ltm->tm_min << ":" << ltm->tm_sec << std::endl;
+    outputFile.close();
+```
+To read the stream from that file :
+```sh
+tail -f /c/tmp/Debug.txt
+```
+
 check memoyleaks
 ---
 [valgring](http://valgrind.org/docs/manual/mc-manual.html)
