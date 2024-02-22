@@ -180,6 +180,13 @@ without bothering with quoting each line's \
 content. This works, but you can't indent.";
 ```
 
+#### Wstring
+
+meaning wide-string because it is based on wchar encoded on 2 bytes instead of one
+- those are declared with `L""`
+- rember to use `.c_str()` to read it
+
+
 reference
 --------
 -- https://www.quora.com/Are-references-in-C++-stored-in-memory-like-pointers-or-not/answer/Lance-Diduck
