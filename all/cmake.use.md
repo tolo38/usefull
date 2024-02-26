@@ -31,6 +31,10 @@ or
 ```
 message(PROJECT_SOURCE_DIR="${PROJECT_SOURCE_DIR}")
 ```
+Run just one file
+```
+cmake -P file.cmake
+```
 
 [cmake-converter]: https://github.com/pavelliavonau/cmakeconverter
 [special flags]: https://cmake.org/cmake/help/latest/variable/CMAKE_MFC_FLAG.html
