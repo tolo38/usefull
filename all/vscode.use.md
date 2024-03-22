@@ -31,6 +31,7 @@ Hotkeys
 |Ctrl+j Ctrl+k||toggleVim|enable/disable VimPlugin| if vscodevim installed. Not neovim.
 |Ctrl+l||Clean output window if focused| when clause : `focusedView == 'workbench.panel.output'` [edite when clause]
 |Alt+h (Alt+l)||Move the selection to left (right)|
+|Alt+o|| toggle header/source C++|
 |[More key bindings]
 
  </details>
