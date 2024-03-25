@@ -32,6 +32,29 @@ int main()
 }
 ```
 
+Lazy evaluation
+---
+Here is a minimal exemple
+```C++
+#include <iostream>
+#include <assert.h>
+
+bool func(int i) {
+    std::cout << "func" << i << "\n";
+    assert(false);
+    return true;
+}
+
+int main() {
+    if (true || func(1)) {
+        std::cout << "ok\n";
+    }
+    if (false || func(2)) {
+        std::cout << "ok\n";
+    }
+}
+```
+
 
 reference
 ---
