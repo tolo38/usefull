@@ -2,7 +2,7 @@
 -----------------------------------------------------------
 - Premier programme
 -----------------------------------------------------------
-```
+```C++
 class POINT
 {
 	public :
@@ -86,7 +86,7 @@ headers
 ---
 http://www.cplusplus.com/articles/Gw6AC542/
 
-```
+```c++
 Transtypage :
 const_cast;dynamic_cast;reinterpret_cast;static_cast
 
@@ -105,7 +105,7 @@ inline double carre(double y){return y*y;}			#Macro en C
 Macro
 ---
 * [Change methode behavior or by pass](https://www.geeksforgeeks.org/print-geeksforgeeks-empty-main-c/)
-```
+```c++
 #include <iostream>
 #include <string>
 
@@ -213,12 +213,12 @@ meaning wide-string because it is based on wchar encoded on 2 bytes instead of o
 reference
 --------
 -- https://www.quora.com/Are-references-in-C++-stored-in-memory-like-pointers-or-not/answer/Lance-Diduck
-<cite>
-	A reference is another name for the same variable. For example, "Charlie Brown" is also called "Chuck" -- a reference is just another name for the same object.
-	The "last person in the lunch line" is a pointer, and can change or point to nothing.
-	Another analogy is from UNIX file system: a reference is a hard link, a pointer is a soft link.
-	How they are stored is not specified, but a pointer you can pretty much rely on having storage 
-</cite>
+
+>	A reference is another name for the same variable. For example, "Charlie Brown" is also called "Chuck" -- a reference is just another name for the same object.
+>	The "last person in the lunch line" is a pointer, and can change or point to nothing.
+>	Another analogy is from UNIX file system: a reference is a hard link, a pointer is a soft link.
+>	How they are stored is not specified, but a pointer you can pretty much rely on having storage 
+
 les reference sont une étique qui pointe sur la meme case mémoir, mais non pas besoin d'être déreférencée
 Par defaut argument passage par copie;
 - `int& ref(var) `				creer une reference sur var 
@@ -361,6 +361,7 @@ malloc
 	
 class Objet{}; + Heritage
 ----
+```c++
 class ObjChild : public Obj{}		Heritage : ObjChild herite de Obj et est definie entre crochet, Note : public->par defaut l'heritage est private, ce aui rend inaccecible les declaration de la class parente.
 private :				par defaut tout les attributs sont private
 a noter que l'on peu acceder au attribut privé des autres objets si il sont de la classe en train d'être implémentée.
@@ -375,6 +376,7 @@ void methode(int param) const;		const : methode qui ne modifie pas l'objet (ne c
 ObjMere::methode();			demasquage : apple la methode implémenté dans la class mere
 Obj::methode();				de meme pour les methodes statiques
 static void meth();			déclaration d'une methode statique
+```
 
 surcharge d'operateur
 ----------
@@ -404,9 +406,9 @@ Probleme des collections hétérogènes (construit par copie ?) :
 	
 class abstrait
 ---
-```
-au moins une methode virtuel pure
-virtual void meth()=0;			methode virtuel pure
+```c++
+// au moins une methode virtuel pure
+virtual void meth()=0;			// methode virtuel pure
 ```
 	
 Standar Lib (il y en a 15 qui vienne du C)
@@ -536,7 +538,7 @@ where
     *[] lambda-introducer
     *{} instruction bloc of the funtion
 It can also be seen as follow
-```
+```c++
 [ capture clause ] (parameters) mutable sepcification -> return-type
 {
    definition of method
@@ -594,7 +596,7 @@ See details at [time convertion]
 	
 Template - Généricité
 -------------------
-```
+```c++
 template<typename T>			indique que la méthode ou la class est générique via l'element T.
 					dois etre implémenté dans le fichier Header
 template<typename T,typename S>		on peux en avoir plusieurs 
