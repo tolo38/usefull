@@ -39,7 +39,7 @@ and **function** (ex : `.onInit` -> it is automatically called)
 
 Installation details are implemented in **section**
 
-### Var and const
+### [Variable] and const
 use var instead of define
 not set at the same time
 define are somehow const
@@ -210,4 +210,5 @@ What you're looking for is [AUTOIT]
 [NSIS Full Tutorial]: https://nsis.sourceforge.io/Docs/
 [NSIS Simple Tutorial]: https://nsis.sourceforge.io/Simple_tutorials
 [option]: http://unattended.sourceforge.net/installers.php
+[Variable]: https://documentation.help/CTRE-NSIS/Section4.2.html
 [wikipedia]: https://en.wikipedia.org/wiki/Nullsoft_Scriptable_Install_System
