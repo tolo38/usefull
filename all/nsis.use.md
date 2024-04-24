@@ -203,7 +203,7 @@ LangString TEXT_DIR_DEST ${LANG_ENGLISH} "Please select Installation Directory"
 ; The file to write
 OutFile 'Main.exe'
 
-InstallDir  "C:\tmp\uninstaller"
+InstallDir  "C:\tmp\"
 
 ;!insertmacro MUI_PAGE_DIRECTORY
 !define installed_path_def $INSTDIR
@@ -222,10 +222,17 @@ Section
 SectionEnd
  
 Section "uninstall"
+    ;Delete "$INSTDIR\uninstall.exe"
     ReadRegStr $installed_path_reg HKLM "${UNINSTALLER_REGKEY}" "UninstallString"
+    ${If} $installed_path_reg == ""
+    MessageBox MB_ICONEXCLAMATION "This unistaller has already been run!"
+    WriteRegStr HKLM "${UNINSTALLER_REGKEY}" "UninstallString" "$INSTDIR"
+    ${Else}
+    ReadRegStr $INSTDIR HKLM "${UNINSTALLER_REGKEY}" "UninstallString"
     MessageBox MB_OK "DiR: $INSTDIR$\nVAR: $installed_path_var$\nDEF: ${installed_path_def}"
-    MessageBox MB_OK "REG: $installed_path_reg$\n"
+    MessageBox MB_OK "REG: $installed_path_reg$\nEXE: $INSTDIR"
     DeleteRegKey HKLM "${UNINSTALLER_REGKEY}"
+    ${EndIf}
 SectionEnd
 ```
 
