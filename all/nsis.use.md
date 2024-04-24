@@ -195,6 +195,39 @@ SectionEnd
 LangString TEXT_DIR_DEST ${LANG_ENGLISH} "Please select Installation Directory"
 ```
 
+### Registery Key
+
+```nsis
+!include "MUI2.nsh" ;Include Modern UI
+
+; The file to write
+OutFile 'Main.exe'
+
+InstallDir  "C:\tmp\uninstaller"
+
+;!insertmacro MUI_PAGE_DIRECTORY
+!define installed_path_def $INSTDIR
+var installed_path_var
+!insertmacro MUI_PAGE_INSTFILES
+
+!define SOFTWARE_NAME_FULL_VERSION "Main-test_toto_soft"
+!define UNINSTALLER_REGKEY 	"Software\Microsoft\Windows\CurrentVersion\Uninstall\${SOFTWARE_NAME_FULL_VERSION}"
+var installed_path_reg
+
+Section
+    strcpy $installed_path_var $INSTDIR
+    MessageBox MB_OK "DiR: $INSTDIR$\nVAR: $installed_path_var$\nDEF: ${installed_path_def}"
+    WriteUninstaller "$INSTDIR\tmp\uninstall.exe"
+    WriteRegStr HKLM "${UNINSTALLER_REGKEY}" "UninstallString" "$INSTDIR"
+SectionEnd
+ 
+Section "uninstall"
+    ReadRegStr $installed_path_reg HKLM "${UNINSTALLER_REGKEY}" "UninstallString"
+    MessageBox MB_OK "DiR: $INSTDIR$\nVAR: $installed_path_var$\nDEF: ${installed_path_def}"
+    MessageBox MB_OK "REG: $installed_path_reg$\n"
+    DeleteRegKey HKLM "${UNINSTALLER_REGKEY}"
+SectionEnd
+```
 
 ---
 
