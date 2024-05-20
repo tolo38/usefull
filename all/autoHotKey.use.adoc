@@ -1,0 +1,161 @@
+# link:https://www.autohotkey.com/docs/v2/index.htm[AHK AutoHotkey]
+
+== Examples
+."Keep Me Fullscreen" script
+[%collapsible]
+====
+```ahk
+#Requires AutoHotkey v2.0
+
+SetTimer WatchFullscreen, 25000
+WatchFullscreen()
+{
+    If isFullscreenRequested()
+    {
+        Send "{F11}"
+    }
+
+}
+
+SetTimer WatchMouse, 500
+WatchMouse()
+{
+    global moving
+    global g_right
+    MouseMoving()
+    fullscreen := isWinFullscreen()
+    if moving and fullscreen and g_right ;and GetKeyState("right")
+            Send "{F11}"
+    g_right := max(g_right-1,0)
+}
+
+Right::
+{
+    Send "{Right}"
+    global g_right := 6
+    ;SetTimer WatchMouse, 500
+}
+
+isWinFullscreen()
+{
+    try
+    {
+        WinGetPos &X, &Y, &W, &H, "A"
+        return ((W >= A_ScreenWidth ) & (H >= A_ScreenHeight)) 
+    }
+    catch TargetError as e
+    {}
+    return false
+}
+
+isFullscreenRequested()
+{
+    global moving
+    fullscreen := isWinFullscreen()
+    WinGetPos &X, &Y, &W, &H, "A"
+    winMax := (X+Y <= 0 and W+H >= A_ScreenHeight+A_ScreenWidth)
+    return !fullscreen and winMax and !moving
+}
+
+MouseGetPos &prev_xpos, &prev_ypos 
+MouseMoving()
+{
+    If moving
+    {
+        MouseGetPos , &ypos
+        mouse_outside := ypos - 720
+        mouse_outside := mouse_outside*mouse_outside > 400000
+        if mouse_outside
+            return
+    }    
+
+    global prev_xpos, prev_ypos
+    MouseGetPos &xpos, &ypos
+    global moving := xpos+1000*ypos != prev_xpos+1000*prev_ypos
+    If moving
+    {
+        prev_xpos := xpos
+        prev_ypos := ypos
+    }
+}
+
+#z::Reload
+    
+^#z::
+{
+    ;WinGetPos &X, &Y, &W, &H, "A"
+    ;MsgBox "The active window is at " W "," H "`nThe active window is at " A_ScreenWidth "," A_ScreenHeight
+    ;MsgBox "x:" X ", y:" Y ", sum:" X+Y ", f:" fullscreen ", m:" moving
+    ;MouseGetPos &xpos, &ypos
+    ;MsgBox xpos+1000*ypos "," prev_xpos+1000*prev_ypos
+}
+```
+====
+."Open Zoom in fullscreen" script (ahk - V1)
+[%collapsible]
+====
+```ahk
+
+^#z::Reload
+
+;^#e::Send "^w"
+^#e::
+{
+    MsgBox,,, "Everything is closed !", 5
+    return
+}
+
+
+; open zoom
+#z::
+{
+    Run ...
+    ;if WinExist("Launch")
+    WinWait, Launch,, 2
+    if ErrorLevel
+    {
+        MsgBox, WinWait timed out.
+        return
+    }
+    WinActivate
+    Sleep 400
+    ; then open meeting
+    ; Send {Click 1358 256}  ; LeftClick works as well
+    Send {Tab}
+    Send {Tab}
+    Send {Enter}
+    ; wait the meeting is launched
+    WinWait, Join Audio,, 7
+    if ErrorLevel
+    {
+        MsgBox, WinWait timed out.
+        return
+    }
+    ; accept audio questions
+    Send {Enter}
+    ;Send {Esc}
+    ; go to fullscreen mode
+    Send {Tab}
+    Send {Tab}
+    Send {Tab}
+    Send {Enter}
+    Send {Up} 
+    Send {Enter}
+    ; turn camera on
+    Sleep 1000
+    Send {Tab}
+    Send {Tab}
+    Send {Tab}
+    Send {Enter}
+    return
+}
+```
+====
+
+."...
+[%collapsible]
+====
+```ahk
+
+```
+====
