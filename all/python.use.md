@@ -603,6 +603,11 @@ while True:             # Event Loop
 window.close()
 ```
 - [multiline text colored]https://github.com/PySimpleGUI/PySimpleGUI/issues/2547)
+- [bind to tkinter event](https://docs.pysimplegui.com/en/latest/documentation/module/extending/event_bindings/)
+```py
+window.bind('<TKINTER EVENT>', 'STRING TO APPEND')
+```
+
 
 
 tkinter
