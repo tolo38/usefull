@@ -257,6 +257,8 @@ def a():
 	a.wasCalled=True
 ```
 
+---
+
 Note
 ---
 
@@ -277,6 +279,22 @@ ToUnderstand
 ---
 - `*a` the "splat operator" unpack sequence (such as generator) see [PEP448] for more detail
 - `**a`
+
+---
+
+Advanced Technic
+---
+
+### null conditional
+
+* "Most idiomatic way to convert None to empty string"
+** `str(s or '')`
+* General case (ex with tostring())
+** `s = sb and sb.ToString()`
+* If getting None is important
+** `s = (sb or None) and sb.toString()` -> check with `type(s)`
+
+
 
 
 ---
