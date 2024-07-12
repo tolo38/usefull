@@ -195,6 +195,7 @@ read_data = f.read()			#read file (-> all document into one string)
 f.closed						#test if the file is open/close
 f.write(b 'something')			#write something in f (b : opt, mean that it is a binary file
 seek(),tell()					#allow to move in the file
+pprint(stringData, stream=outfile) 	#into a file
 ```
 - `help('FORMATTING')` for more details
 
