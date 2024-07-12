@@ -523,6 +523,17 @@ plt.stem(x,y, 'r', )
 plt.plot(x,y)
 ```
 
+#### Numpy
+* array : `a = np.arange(1,11,1)` `a = np.array([[1, 2], [3, 4]])`
+* `a.shape`
+* Indexing :
+** `,` separte dimention
+** `:` take all values from dimmention
+** `-i` "i"th element from end
+** `::i` downsampling take only ith element
+** `[f:t:s]` f : from, t : to, s : step
+
+
 Pandas
 ---
 - [Pandas Basic]
