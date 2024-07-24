@@ -159,21 +159,28 @@ x = lambda a, b : a * b
 Fonction
 ---
 
+```py
 def func():						#create the func function
 								#return None by Default
 func							#function address
 def func(a1,a2=a):				#a1,a2 argument (a2 default value is a value)
 								#warning: The default value is evaluated only once
 def func(L=[]):					#Then L is allways the same list 
-```py								#here is the solution
+```
+
+```py	
+#here is the solution
 def f(a, L=None):
     if L is None:
         L = []
     L.append(a)
     return L
 ```
+
+```py	
 def func(*args):				#args will contain the list of all passed arguments
-```py
+```
+```py	
 def func(a : str)->int:
 	"""Documentation
 	on several lines
@@ -181,11 +188,22 @@ def func(a : str)->int:
 	pass
 
 ```
+```py	
 print(func.__doc__)				#display the function doc
 print(func.__annotations__)		#function attribute type(warning : c'est juste de la doc on peu mettre nimporte quoi) 
+```
+
+#### static variable
+
+```py
+def foo():
+  foo.svar+=1 # ex: count foo call
+foo.svar=0
+```
 
 In/Out
 ---
+
 ```py
 x = int(input("Please enter an integer: "))		#read a int from keyboard
 print(repr(x).rjust(2), repr(x*x).rjust(3), end=' ')
