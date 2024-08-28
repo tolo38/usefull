@@ -272,6 +272,30 @@ fonction
 - tableau attention passage par reference automatique
 - Aliases : give an additional name to a function or variable with `static inline constexpr auto new_name = old_name`
 
+black magic
+---
+here is some bad practice
+* hidding change hunder the hood of a separated function
+```c++
+void change(std::string*& a) {
+    // auto b = a;
+    a = new std::string("test\n");
+    // std::cout << *a;
+    // *a = "truc\n";
+}
+int main() {
+    std::string a = "toto\n";
+    std::vector<std::string> v = { "xyzzy", "plugh", "abracadabra" };
+    // std::cout << v[1];
+    std::cout << a;
+    // auto a_ptr = &v[1]; 
+    auto a_ptr = &a;
+    change(a_ptr);
+    std::cout << a;
+    // std::cout << v[1];
+}
+```
+
 #### Structured binding in C++17
 
 return multiple values from a function using a local structure or tuple
