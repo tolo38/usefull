@@ -18,6 +18,16 @@ set(CMAKE_MFC_FLAG 2)
 
 [Settings][vscode-settings]
 
+argument
+---
+In the `CMakeLists.txt` file, create a cache variable, as documented here:
+```
+SET(MY_VARIABLE "option_value" CACHE STRING "Some user-specified option")
+```
+Then, either use the GUI (ccmake or cmake-gui) to set the cache variable, or specify the value of the variable on the cmake command line with -D:
+```
+cmake -DMY_VARIABLE:STRING=option_value2
+```
 
 Degug
 ---
