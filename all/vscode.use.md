@@ -197,6 +197,12 @@ Get-PSReadlineOption
 More details at [powershell-history](https://0xdf.gitlab.io/2018/11/08/powershell-history-file.html)
 
 
+#### Debugging
+
+Using **watch** is useful especially when pinning structure [leaves elements](https://stackoverflow.com/questions/18057566/visual-studio-watch-member-of-structure-in-an-array)
+
+
+
 [vscode keybindings customization]: https://code.visualstudio.com/docs/getstarted/keybindings#_advanced-customization
 [More key bindings]: https://code.visualstudio.com/docs/getstarted/keybindings#_basic-editing
 [edite when clause]: https://code.visualstudio.com/api/references/when-clause-contexts
