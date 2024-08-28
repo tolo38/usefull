@@ -44,6 +44,7 @@ More advenced option is to look for installed lib in file system:
 * [How do I import other Python files? - Stack Overflow](https://stackoverflow.com/questions/2349991/how-do-i-import-other-python-files)
 * [python - `from ... import` vs `import .` - Stack Overflow](https://stackoverflow.com/questions/9439480/from-import-vs-import)
 * [Python | __import__() function - GeeksforGeeks:](https://www.geeksforgeeks.org/python-__import__-function/)
+* [Python import: Advanced Techniques and Tips](https://realpython.com/python-import/)
 
 
  
@@ -664,6 +665,7 @@ window.close()
 window.bind('<TKINTER EVENT>', 'STRING TO APPEND')
 ```
 
+* with asynchronous use [asyncio](https://stackoverflow.com/questions/70497095/implementing-asyncio-with-pysimplegui)
 
 
 tkinter
