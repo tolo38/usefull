@@ -159,3 +159,8 @@ MouseMoving()
 
 ```
 ====
+
+Good idea
+
+* https://stackoverflow.com/questions/22671036/autohotkey-send-keystroke-when-mouse-touch-edge-of-screen-twice
+* https://stackoverflow.com/questions/65986489/how-do-i-activate-a-script-only-if-the-mouse-is-at-a-certain-coordinate-of-the-s
