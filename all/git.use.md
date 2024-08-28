@@ -205,6 +205,14 @@ Then add it
 * It is easy to edit any commit with `git rebase -i ###~` with `###` the commit ID.
 * Use `git rebase --continue` to go for the next commit.
 
+### Fork, how to copy your repo to a new remote
+
+* `git clone` old_repo locally
+* [opt] get all branches content ```for remote in `git branch -r`; do git branch --track ${remote#origin/} $remote; done```
+   * `git fetch` `git pull` 
+* create new_repo on server (ex:blank-c)
+* set local old_repo new address `git remote set-url origin  git@github.com:tolo38/blank-c.git`
+* `git push origin --all`
 
 [Cheat-sheet - github]: https://education.github.com/git-cheat-sheet-education.pdf
 [Cheat-sheet - gitlab]: https://about.gitlab.com/images/press/git-cheat-sheet.pdf
