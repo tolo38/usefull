@@ -410,7 +410,29 @@ class abstrait
 // au moins une methode virtuel pure
 virtual void meth()=0;			// methode virtuel pure
 ```
-	
+
+Note
+---
+
+overload enum in child class : X
+Constructor are called from base to child. ( so it cannot call child methode, even virtuals, even pure)
+
+#### visibility
+```c++
+class A: public class B
+```
+it is also possible to change visibility modifier of members with `using` (but private is hidden, so not accessible)
+
+#### Const
+all the significations
+
+-------
+
+c++ delete pure virtual function : to not have to implement it in the derived class
+
+c++ pass pointer to array of pointers to function
+
+ 
 Standar Lib (il y en a 15 qui vienne du C)
 ---------
 |Lib|Details|
