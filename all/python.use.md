@@ -285,6 +285,36 @@ def a():
 	a.wasCalled=True
 ```
 
+Documentation
+---
+Generate with `pydoc`
+```py
+"""
+This example module shows various types of documentation available for use
+with pydoc.  To generate HTML documentation for this module issue the
+command:
+
+    pydoc -w <filenamewithoutDotPy>
+
+"""
+
+class Foo(object):
+    """
+    Foo encapsulates a name and an age.
+    """
+    def __init__(self, name, age):
+        """
+        Construct a new 'Foo' object.
+
+        :param name: The name of foo
+        :param age: The ageof foo
+        :return: returns nothing
+        """
+        self.name = name
+        self.age = age
+```
+
+
 ---
 
 Note
@@ -338,6 +368,11 @@ Running python generate caching files in `__pychache__` folder to optimise exect
 ```sh
 python -B
 ```
+
+[Asynchrnous]
+---
+
+[Asynchronous]: https://medium.com/velotio-perspectives/an-introduction-to-asynchronous-programming-in-python-af0189a88bbb
 
 
 Package
